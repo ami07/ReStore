@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/repos/asf/!svn/ver/1397333/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_primitive_types
+END
+test_double.avro
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/repos/asf/!svn/ver/1397333/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_primitive_types/test_double.avro
+END
+test_int.avro
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/repos/asf/!svn/ver/1397333/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_primitive_types/test_int.avro
+END
+test_long.avro
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/repos/asf/!svn/ver/1397333/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_primitive_types/test_long.avro
+END
+test_enum.avro
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/repos/asf/!svn/ver/1397333/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_primitive_types/test_enum.avro
+END
+test_float.avro
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/repos/asf/!svn/ver/1397333/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_primitive_types/test_float.avro
+END
+test_string.avro
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/repos/asf/!svn/ver/1397333/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_primitive_types/test_string.avro
+END

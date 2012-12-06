@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1397761/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files
+END
+expected_testArrayWithSchema.avro
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/repos/asf/!svn/ver/1065886/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testArrayWithSchema.avro
+END
+test_record.avro
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/repos/asf/!svn/ver/1065886/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_record.avro
+END
+test_array.avro
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/repos/asf/!svn/ver/1065886/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_array.avro
+END
+expected_test_dir_1.avro
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1364197/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_test_dir_1.avro
+END
+expected_testRecordWithFieldSchema.avro
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/repos/asf/!svn/ver/1065886/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecordWithFieldSchema.avro
+END
+test_generic_union.avro
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_generic_union.avro
+END
+expected_testRecordSplitFromText1.avro
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/repos/asf/!svn/ver/1158061/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecordSplitFromText1.avro
+END
+test_record.txt
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/repos/asf/!svn/ver/1158061/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_record.txt
+END
+expected_testRecordSplitFromText2.avro
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/repos/asf/!svn/ver/1158061/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecordSplitFromText2.avro
+END
+expected_testFileWithNoExtension.avro
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/repos/asf/!svn/ver/1302757/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testFileWithNoExtension.avro
+END
+expected_testRecursiveRecordReference1.avro
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecursiveRecordReference1.avro
+END
+test_recursive_record_in_map.avro
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_recursive_record_in_map.avro
+END
+test_recursive_record_in_union.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_recursive_record_in_union.avsc
+END
+test_recursive_record_in_array.avro
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_recursive_record_in_array.avro
+END
+expected_testRecursiveRecordReference2.avro
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecursiveRecordReference2.avro
+END
+expected_testCorruptedFile.avro
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/repos/asf/!svn/ver/1384536/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testCorruptedFile.avro
+END
+test_recursive_record_in_record.avro
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_recursive_record_in_record.avro
+END
+expected_testRecursiveRecordReference3.avro
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecursiveRecordReference3.avro
+END
+expected_testRecordSplit1.avro
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/repos/asf/!svn/ver/1065886/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecordSplit1.avro
+END
+expected_testRecordSplit2.avro
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/repos/asf/!svn/ver/1065886/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testRecordSplit2.avro
+END
+expected_testDir.avro
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/repos/asf/!svn/ver/1364197/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testDir.avro
+END
+expected_test_dir_1_2.avro
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/repos/asf/!svn/ver/1364197/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_test_dir_1_2.avro
+END
+expected_testMultipleSchemas1.avro
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/repos/asf/!svn/ver/1397761/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testMultipleSchemas1.avro
+END
+test_no_extension
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/repos/asf/!svn/ver/1303236/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_no_extension
+END
+test_recursive_record_in_union.avro
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/repos/asf/!svn/ver/1374925/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_recursive_record_in_union.avro
+END
+test_record.avsc
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/repos/asf/!svn/ver/1158061/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_record.avsc
+END
+expected_testMultipleSchemas2.avro
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/repos/asf/!svn/ver/1397761/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testMultipleSchemas2.avro
+END
+expected_testArrayDefault.avro
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/repos/asf/!svn/ver/1065886/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/expected_testArrayDefault.avro
+END
+test_corrupted_file.avro
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/repos/asf/!svn/ver/1384536/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/test_corrupted_file.avro
+END
+messages.avro
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/repos/asf/!svn/ver/1301850/pig/trunk/contrib/piggybank/java/src/test/java/org/apache/pig/piggybank/test/storage/avro/avro_test_files/messages.avro
+END
