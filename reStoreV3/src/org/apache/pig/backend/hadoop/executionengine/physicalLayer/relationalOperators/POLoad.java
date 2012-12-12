@@ -243,4 +243,18 @@ public class POLoad extends PhysicalOperator {
     public void setLimit(long limit) {
         this.limit = limit;
     }
+    
+    /**
+	 * @author iman
+	 */
+	@Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POLoad){
+			//the other operator is also an POLoad then there is a possibility of equivalence
+			if(lFile.isEquivalent(((POLoad) otherOP).lFile) && lFile.getFileName().equals(((POLoad) otherOP).lFile.getFileName())){
+				return true;
+			}
+		}
+		return false;
+	} 
 }

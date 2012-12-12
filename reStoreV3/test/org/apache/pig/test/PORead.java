@@ -107,4 +107,12 @@ public class PORead extends PhysicalOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
         return null;
     }
+
+	@Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof PORead){
+			return true;
+		}
+		return false;
+	}
 }

@@ -54,4 +54,12 @@ public class FloatRound extends EvalFunc<Integer>{
 	public Schema outputSchema(Schema input) {
         return new Schema(new Schema.FieldSchema(getSchemaName(this.getClass().getName().toLowerCase(), input), DataType.INTEGER));
 	}
+	
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof FloatRound){
+			return true;
+		}
+		return false;
+	}
 }

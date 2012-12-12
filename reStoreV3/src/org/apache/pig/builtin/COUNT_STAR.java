@@ -94,6 +94,16 @@ public class COUNT_STAR extends EvalFunc<Long> implements Algebraic, Accumulator
             return mTupleFactory.newTuple(bag.iterator().hasNext()? 
                     Long.valueOf(1L) : Long.valueOf(0L));
         }
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Initial){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Intermediate extends EvalFunc<Tuple> {
@@ -110,6 +120,17 @@ public class COUNT_STAR extends EvalFunc<Long> implements Algebraic, Accumulator
                 throw new ExecException(msg, errCode, PigException.BUG, e);
             }
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Intermediate){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Final extends EvalFunc<Long> {
@@ -123,6 +144,17 @@ public class COUNT_STAR extends EvalFunc<Long> implements Algebraic, Accumulator
                 throw new ExecException(msg, errCode, PigException.BUG, ee);
             }
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Final){
+				return true;
+			}
+			return false;
+		}
     }
 
     static protected Long sum(Tuple input) throws ExecException, NumberFormatException {
@@ -173,4 +205,14 @@ public class COUNT_STAR extends EvalFunc<Long> implements Algebraic, Accumulator
         return intermediateCount;
     }
 
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof COUNT_STAR){
+			return true;
+		}
+		return false;
+	}
 }

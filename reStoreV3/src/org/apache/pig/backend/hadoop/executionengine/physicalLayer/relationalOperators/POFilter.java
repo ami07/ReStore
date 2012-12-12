@@ -207,4 +207,22 @@ public class POFilter extends PhysicalOperator {
       }
       return (Tuple) out;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POFilter){
+			//the other operator is also an POFilter then there is a possibility of equivalence
+			if((plan ==null &&  ((POFilter) otherOP).plan ==null)
+					||(plan !=null &&  ((POFilter) otherOP).plan !=null
+					&& plan.isEquivalent(((POFilter) otherOP).plan) 
+					&& comOp.isEquivalent(((POFilter) otherOP).comOp)
+					&& compOperandType ==((POFilter)otherOP).compOperandType)){
+				return true;
+			}
+		}
+		return false;
+	}
 }

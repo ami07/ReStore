@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * ATAN implements a binding to the Java function
  * {@link java.lang.Math#atan(double) Math.atan(double)} for computing the
@@ -28,5 +30,16 @@ package org.apache.pig.builtin;
 public class ATAN extends DoubleBase{
 	Double compute(Double input){
 		return Math.atan(input);
+	}
+	
+	/**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof ATAN){
+			return true;
+		}
+		return false;
 	}
 }

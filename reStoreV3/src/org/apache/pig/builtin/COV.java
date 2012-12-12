@@ -160,6 +160,14 @@ public class COV extends EvalFunc<DataBag> implements Algebraic {
 
             return output;
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+        	if(func instanceof Initial){
+    			return true;
+    		}
+			return false;
+		}
     }
 
     static public class Intermed extends EvalFunc<Tuple> {
@@ -172,6 +180,14 @@ public class COV extends EvalFunc<DataBag> implements Algebraic {
                 throw new IOException("Caught exception in COV.Intermed", e);
             }
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+        	if(func instanceof Intermed){
+    			return true;
+    		}
+			return false;
+		}
     }
 
     public static class Final extends EvalFunc<DataBag> {
@@ -234,6 +250,14 @@ public class COV extends EvalFunc<DataBag> implements Algebraic {
 
             return output;
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+        	if(func instanceof Final){
+    			return true;
+    		}
+			return false;
+		}
     }
 
     /**
@@ -322,5 +346,16 @@ public class COV extends EvalFunc<DataBag> implements Algebraic {
     public Schema outputSchema(Schema input) {
         return new Schema(new Schema.FieldSchema(getSchemaName(this.getClass().getName().toLowerCase(), input), DataType.BAG));
     }
+    
+    /**
+     * @author iman
+     */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+    	if(func instanceof COV){
+			return true;
+		}
+		return false;
+	}
 
 }

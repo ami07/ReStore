@@ -30,6 +30,7 @@ import org.apache.pig.ComparisonFunc;
 import org.apache.pig.FuncSpec;
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.data.DataBag;
@@ -213,4 +214,25 @@ public class POUserComparisonFunc extends ExpressionOperator {
         }
         return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POUserComparisonFunc){
+			//the other operator is also an POUserComparisonFunc then there is a possibility of equivalence
+			if(func !=null && ((POUserComparisonFunc) otherOP).func!=null
+				&& func.isEquivalent(((POUserComparisonFunc) otherOP).func)
+				&& funcSpec !=null && ((POUserComparisonFunc) otherOP).funcSpec!=null
+				&& funcSpec.isEquivalent(((POUserComparisonFunc) otherOP).funcSpec) 
+				&& t1 !=null && ((POUserComparisonFunc) otherOP).t1!=null
+				&& t1.isEquivalent(((POUserComparisonFunc) otherOP).t1)
+				&& t2 !=null && ((POUserComparisonFunc) otherOP).t2!=null
+				&& t2.isEquivalent(((POUserComparisonFunc) otherOP).t2)){
+				return true;
+			}
+		}
+		return false;
+	}
 }

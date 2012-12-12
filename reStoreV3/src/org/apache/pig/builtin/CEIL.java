@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * CEIL implements a binding to the Java function
  * {@link java.lang.Math#ceil(double) Math.ceil(double)}. Given a single 
@@ -28,5 +30,16 @@ package org.apache.pig.builtin;
 public class CEIL extends DoubleBase{
 	Double compute(Double input){
 		return Math.ceil(input);
+	}
+	
+	/**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof CEIL){
+			return true;
+		}
+		return false;
 	}
 }

@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * ACOS implements a binding to the Java function
  * {@link java.lang.Math#acos(double) Math.acos(double)} for computing the
@@ -30,5 +32,16 @@ public class ACOS extends DoubleBase{
 	Double compute(Double input){
 		return Math.acos(input);
 		
+	}
+	
+	/**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof ACOS){
+			return true;
+		}
+		return false;
 	}
 }

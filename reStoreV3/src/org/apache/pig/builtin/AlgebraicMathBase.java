@@ -24,6 +24,7 @@ import org.apache.pig.Algebraic;
 import org.apache.pig.EvalFunc;
 import org.apache.pig.PigException;
 import org.apache.pig.backend.executionengine.ExecException;
+import org.apache.pig.builtin.AVG.Initial;
 import org.apache.pig.data.DataBag;
 import org.apache.pig.data.Tuple;
 import org.apache.pig.data.TupleFactory;
@@ -82,6 +83,17 @@ abstract class AlgebraicMathBase<T> extends EvalFunc<T> implements Algebraic {
                 throw new ExecException("Error executing an algebraic function", errCode, PigException.BUG, e);
             }
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Initial){
+				return true;
+			}
+			return false;
+		}
     }
 
     @Override

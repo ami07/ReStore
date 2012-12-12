@@ -179,4 +179,13 @@ public class GroovyEvalFunc<T> extends EvalFunc<T> {
   public Object getInvocationTarget() {
     return this.invocationTarget;
   }
+
+@Override
+public boolean isEquivalent(EvalFunc func) {
+	// TODO Auto-generated method stub
+	if(func instanceof GroovyEvalFunc){
+		return true;
+	}
+	return false;
+}
 }

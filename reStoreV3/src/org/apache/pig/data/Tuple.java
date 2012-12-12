@@ -22,6 +22,7 @@ import java.util.List;
 
 import org.apache.hadoop.io.WritableComparable;
 
+import org.apache.pig.EvalFunc;
 import org.apache.pig.classification.InterfaceAudience;
 import org.apache.pig.classification.InterfaceStability;
 import org.apache.pig.backend.executionengine.ExecException;
@@ -150,4 +151,12 @@ public interface Tuple extends WritableComparable, Serializable, Iterable<Object
      * @throws ExecException this is never thrown. This only exists for backwards compatability reasons.
      */
     String toDelimitedString(String delim) throws ExecException;
+    
+    /**
+     * Compares two tuples and returns true if they are equivalent
+     * @param tuple
+     * @return
+     * @author iman
+     */
+    public abstract boolean isEquivalent(Tuple tuple);
 }

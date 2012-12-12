@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * CBRT implements a binding to the Java function
  * {@link java.lang.Math#cbrt(double) Math.cbrt(double)} for computing the
@@ -28,5 +30,16 @@ public class CBRT extends DoubleBase{
 	Double compute(Double input){
 		return Math.cbrt(input);
 		
+	}
+	
+	/**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof CBRT){
+			return true;
+		}
+		return false;
 	}
 }

@@ -384,4 +384,15 @@ public class JsFunction extends EvalFunc<Object> {
         return result;
     }
 
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof JsFunction){
+			if(functionName.equals(((JsFunction) func).functionName)){
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

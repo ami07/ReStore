@@ -21,6 +21,7 @@ package org.apache.pig.scripting.groovy;
 import java.io.IOException;
 
 import org.apache.pig.AccumulatorEvalFunc;
+import org.apache.pig.EvalFunc;
 import org.apache.pig.data.Tuple;
 import org.apache.pig.impl.logicalLayer.schema.Schema;
 
@@ -66,4 +67,13 @@ public class GroovyAccumulatorEvalFunc extends AccumulatorEvalFunc<Object> {
   public Schema outputSchema(Schema input) {
     return this.groovyGetValue.outputSchema(input);
   }
+
+@Override
+public boolean isEquivalent(EvalFunc func) {
+	// TODO Auto-generated method stub
+	if(func instanceof GroovyAccumulatorEvalFunc){
+		return true;
+	}
+	return false;
+}
 }

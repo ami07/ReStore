@@ -343,5 +343,52 @@ public class PODemux extends PhysicalOperator {
         // nothing need to be done here
         return null;
     }
-        
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof PODemux){
+			//the other operator is also a PODemux then there is a possibility of equivalence
+			if(((curPlan==null && ((PODemux) otherOP).curPlan==null) || (curPlan!=null && ((PODemux) otherOP).curPlan!=null && curPlan.isEquivalent(((PODemux) otherOP).curPlan))) &&
+					((myPlans==null && ((PODemux) otherOP).myPlans==null) || (myPlans!=null && ((PODemux) otherOP).myPlans!=null && isEquivalentListOfPlans(myPlans, ((PODemux) otherOP).myPlans))) &&
+					this.inCombiner == ((PODemux) otherOP).inCombiner){
+				return true;
+			}
+		}
+		return false;
+	}  
+      
+    /**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan, now check the flattening condition
+					
+					//the two plans and their flattening cond are equivalent
+					//remove the found plan from the list of plans of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

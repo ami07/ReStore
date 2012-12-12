@@ -323,5 +323,53 @@ public class POSplit extends PhysicalOperator {
       // no op  
       return null;
     }
-        
+    
+    /**
+   	 * @author iman
+   	 */
+       @Override
+   	public boolean isEquivalent(PhysicalOperator otherOP) {
+   		if(otherOP instanceof POSplit){
+   			//the other operator is also an POSplit then there is a possibility of equivalence
+   			if((splitStore==null && ((POSplit) otherOP).splitStore==null) ||
+   					(splitStore!=null && ((POSplit) otherOP).splitStore!=null && splitStore.isEquivalent(((POSplit) otherOP).splitStore))){
+   				//check if the myPlans are equivalent
+   				if((myPlans ==null && ((POSplit) otherOP).myPlans==null)
+   						||(myPlans !=null && ((POSplit) otherOP).myPlans!=null) && isEquivalentListOfPlans(myPlans, ((POSplit) otherOP).myPlans)){
+   					return true;
+   				}
+   			}
+   		}
+   		return false;
+   	}  
+       
+       /**
+   	 * @author iman
+   	 */
+   	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+   		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+   		for(int i=0;i<currentPlans.size();i++){
+   			PhysicalPlan plan=currentPlans.get(i);
+   			//for every physical plan, check if there is an equivalent plan in otherOp plans
+   			boolean foundEqPlan=false;
+   			for(PhysicalPlan otherPlan:otherOpInputPlans){
+   				if(plan.isEquivalent(otherPlan)){
+   					//find an equivalent plan,
+   					
+   					//remove the found opr from the list of oprs of the other op
+   					otherOpInputPlans.remove(otherPlan);
+   					//exit the current loop
+   					foundEqPlan=true;
+   					break;
+   					
+   				}
+   			}
+   			//we could not find an equivalent plan, then return false
+   			if(!foundEqPlan){
+   				return false;
+   			}
+   		}
+   		
+   		return true;
+   	}
 }

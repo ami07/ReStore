@@ -118,4 +118,13 @@ public class ReadScalars extends EvalFunc<Object> {
         this.inputBuffer = inputBuffer;
         value = null;
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof ReadScalars){
+			return true;
+		}
+		return false;
+	}
 }

@@ -23,6 +23,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 import org.apache.pig.AlgebraicEvalFunc;
+import org.apache.pig.EvalFunc;
+import org.apache.pig.FuncSpec;
 import org.apache.pig.data.DataBag;
 import org.apache.pig.data.DataByteArray;
 import org.apache.pig.data.Tuple;
@@ -50,6 +52,15 @@ public abstract class GroovyAlgebraicEvalFunc<T> extends AlgebraicEvalFunc<T> {
     return Intermed.class.getName();
   }
 
+  @Override
+  public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+  	if(func instanceof GroovyAlgebraicEvalFunc){
+  		return true;
+  	}
+		return false;
+	}
+  
   public static abstract class AlgebraicFunctionWrapper<T> extends GroovyEvalFunc<T> {
     public AlgebraicFunctionWrapper() {
     }
@@ -151,6 +162,7 @@ public abstract class GroovyAlgebraicEvalFunc<T> extends AlgebraicEvalFunc<T> {
         super(path, namespace, methodName, initialMethod, intermedMethod, finalMethod);
       }
     }
+
   }
 
   public static class DataByteArrayGroovyAlgebraicEvalFunc extends GroovyAlgebraicEvalFunc<DataByteArray> {

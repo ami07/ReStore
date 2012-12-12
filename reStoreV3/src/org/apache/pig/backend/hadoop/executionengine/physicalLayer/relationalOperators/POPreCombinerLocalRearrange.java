@@ -223,4 +223,86 @@ public class POPreCombinerLocalRearrange extends PhysicalOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
         return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof POPreCombinerLocalRearrange){
+			//the other operator is also an BinCond then there is a possibility of equivalence
+			if(((inputs !=null && ((POPreCombinerLocalRearrange) otherOP).inputs !=null && 
+					isEquivalentListOfOperators(inputs,((POPreCombinerLocalRearrange) otherOP).inputs ))||
+					(inputs==null && ((POPreCombinerLocalRearrange) otherOP).inputs ==null))&&
+					(((plans != null && ((POPreCombinerLocalRearrange) otherOP).plans !=null) &&
+					isEquivalentListOfPlans(plans,((POPreCombinerLocalRearrange) otherOP).plans ))||
+					(plans == null && ((POPreCombinerLocalRearrange) otherOP).plans ==null))){
+				
+				//check if the 
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan,
+					
+					//remove the found opr from the list of oprs of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfOperators(List<PhysicalOperator> currentOP, List<PhysicalOperator> otherOPs){
+		List<PhysicalOperator> otherOPcpy= new ArrayList<PhysicalOperator>(otherOPs);
+		for(int i=0;i<currentOP.size();i++){
+			PhysicalOperator opr=currentOP.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalOperator otherOpr:otherOPcpy){
+				if(opr.isEquivalent(otherOpr)){
+					//find an equivalent opr, 
+					
+					//remove the found plan from the list of plans of the other op
+					otherOPcpy.remove(otherOpr);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent op, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

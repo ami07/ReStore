@@ -134,4 +134,13 @@ public class JrubyEvalFunc extends EvalFunc<Object> {
         RubySchema rs = PigJrubyLibrary.pigToRuby(ruby, input);
         return PigJrubyLibrary.rubyToPig(rubyEngine.callMethod(funcInfoEncapsulator, "schema", new Object[]{rs, funcReceiver}, RubySchema.class));
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof JrubyEvalFunc){
+			return true;
+		}
+		return false;
+	}
 }

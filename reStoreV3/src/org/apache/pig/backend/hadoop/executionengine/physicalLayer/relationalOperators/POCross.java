@@ -257,4 +257,13 @@ public class POCross extends PhysicalOperator {
         data = null;
     }
 
+	@Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof POCross){
+			return true;
+		}
+		return false;
+	}
+
 }

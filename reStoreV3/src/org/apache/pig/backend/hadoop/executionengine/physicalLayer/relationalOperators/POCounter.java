@@ -17,6 +17,7 @@
  */
 package org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.pig.backend.executionengine.ExecException;
@@ -307,4 +308,60 @@ public class POCounter extends PhysicalOperator {
     public String getOperationID() {
         return operationID;
     }
+
+	@Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POCounter){
+			//the otherOP is also a POCounter and therefore there is a chance of equivalence 
+			if(((counterPlans==null && ((POCounter) otherOP).counterPlans==null)||(counterPlans!=null && ((POCounter) otherOP).counterPlans!=null && isEquivalentListOfPlans(counterPlans, ((POCounter) otherOP).counterPlans)))
+					&& ((mAscCols==null && ((POCounter) otherOP).mAscCols==null)||(mAscCols!=null && ((POCounter) otherOP).mAscCols!=null && isEquivalentCols(mAscCols, ((POCounter) otherOP).mAscCols)))
+					&& isDenseRank == ((POCounter) otherOP).isDenseRank && isRowNumber == ((POCounter) otherOP).isRowNumber){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean isEquivalentCols(List<Boolean> mAscCols1, List<Boolean> mAscCols2) {
+		if(mAscCols1.size()!=mAscCols2.size()){
+			return false;
+		}
+		for(int i=0;i<mAscCols1.size(); i++){
+			if(mAscCols1.get(i)!=mAscCols2.get(i)){
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan, now check the flattening condition
+					
+					//the two plans and their flattening cond are equivalent
+					//remove the found plan from the list of plans of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

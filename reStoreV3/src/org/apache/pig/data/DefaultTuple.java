@@ -499,4 +499,15 @@ public class DefaultTuple extends AbstractTuple {
     public static Class<? extends TupleRawComparator> getComparatorClass() {
         return DefaultTupleRawComparator.class;
     }
+
+	@Override
+	public boolean isEquivalent(Tuple tuple) {
+		if(tuple instanceof DefaultTuple){
+			//the other operator is also an  TargetedTuple then there is a possibility of equivalence
+			if(mFields.containsAll(((TargetedTuple) tuple).getAll())){
+				return true;
+			}
+		}
+		return false;
+	}
 }

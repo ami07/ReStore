@@ -834,4 +834,52 @@ public class POLocalRearrange extends PhysicalOperator {
         }
         return (Tuple) out;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof POLocalRearrange){
+			//the other operator is also an POLocalRearrange then there is a possibility of equivalence
+			if(index== ((POLocalRearrange) otherOP).index && keyType == ((POLocalRearrange) otherOP).keyType && resultType == ((POLocalRearrange) otherOP).resultType){
+				if(isEquivalentListOfPlans(plans,((POLocalRearrange) otherOP).plans)){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan, now check the flattening condition
+					
+					//the two plans and their flattening cond are equivalent
+					//remove the found plan from the list of plans of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

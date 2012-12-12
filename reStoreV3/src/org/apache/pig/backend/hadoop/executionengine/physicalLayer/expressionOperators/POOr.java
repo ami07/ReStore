@@ -19,6 +19,7 @@ package org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOp
 
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.data.DataType;
@@ -116,4 +117,18 @@ public class POOr extends BinaryComparisonOperator {
         clone.cloneHelper(this);
         return clone;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POOr){
+			//the other operator is also an OR then there is a possibility of equivalence
+			if(lhs.isEquivalent(((POOr) otherOP).getLhs())&& rhs.isEquivalent(((POOr) otherOP).getRhs())){
+				return true;
+			}
+		}
+		return false;
+	}
 }

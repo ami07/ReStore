@@ -83,4 +83,9 @@ public abstract class ComparisonFunc extends WritableComparator {
     public void setReporter(PigProgressable reporter) {
         this.reporter = reporter;
     }
+
+	abstract public boolean isEquivalent(ComparisonFunc func); /*{
+		// TODO Auto-generated method stub
+		return false;
+	}*/
 }

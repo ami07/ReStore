@@ -106,4 +106,40 @@ public class PONative extends PhysicalOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
         return null;
     }
+    
+    /**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		//the other operator is also PONative, then there is a possibility of equivalence
+		if(otherOP instanceof PONative){
+			if(nativeMRjar.equals(((PONative)otherOP).nativeMRjar) && isEquivalentParams(((PONative)otherOP).params)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean isEquivalentParams(String[] otherOPparams) {
+		if(params == null && otherOPparams==null){
+			return true;
+		}
+		
+		for(String param : params){
+			boolean found=false;
+			for(String otherParam : otherOPparams){
+				if(param.equals(otherParam)){
+					found=true;
+					continue;
+				}
+			}
+			if(found){
+				continue;
+			}else{
+				return false;
+			}
+		}
+		return true;
+	}
 }

@@ -23,6 +23,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -365,4 +366,40 @@ public class POStream extends PhysicalOperator {
       }
       return (Tuple) out;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof POStream){
+			//the other operator is also an BinCond then there is a possibility of equivalence
+			if(properties!=null && ((POStream) otherOP).properties!=null && isEquivalentProperties(properties,((POStream) otherOP).properties)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentProperties(Properties properties1,
+			Properties properties2) {
+		if(properties1==null && properties2==null) return true;
+		if(properties1!=null && properties2!=null && properties1.size()==properties2.size()){
+			Set<String> propertiesList1=properties1.stringPropertyNames();
+			
+			for(String property: propertiesList1){
+				if(properties2.containsKey(property) && properties1.getProperty(property).equals(properties2.getProperty(property))){
+					continue;
+				}else{
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
+	}
 }

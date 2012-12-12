@@ -17,6 +17,7 @@
  */
 package org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators;
 
+import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -209,4 +210,56 @@ public class POUnion extends PhysicalOperator {
         }
         return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POUnion){
+			//the other operator is also an POUnion then there is a possibility of equivalence
+			if(resultType == ((POUnion) otherOP).resultType ){
+				if((inputs==null && ((POUnion)otherOP).inputs==null)
+						||(inputs!=null && ((POUnion)otherOP).inputs!=null && isEquivalentListOfOPs(inputs, ((POUnion)otherOP).inputs)))
+				return true;
+			}
+		}
+		return false;
+	}
+    
+    /**
+	 * 
+	 * @param listOps1
+	 * @param listOps2
+	 * @return
+	 * 
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfOPs(List<PhysicalOperator> listOps1, List<PhysicalOperator> listOps2) {
+		
+		List<PhysicalOperator> otherTempLeafOps= new ArrayList<PhysicalOperator>(listOps2);
+		for(int i=0;i<listOps1.size();i++){
+			PhysicalOperator currentLeafOp=listOps1.get(i);
+			//for every exp op, check if there is an equivalent exp op in otherLeafOps list
+			boolean foundEqLeafOp=false;
+			for(PhysicalOperator otherLeafOp:otherTempLeafOps){
+				if(currentLeafOp.isEquivalent(otherLeafOp)){
+					
+					//the two LeafOps  are equivalent
+					//remove the found LeafOp from the list of LeafOps of the other op
+					otherTempLeafOps.remove(otherLeafOp);
+					//exit the current loop
+					foundEqLeafOp=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqLeafOp){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

@@ -108,4 +108,15 @@ public class GFCross extends EvalFunc<DataBag> {
         }
     }
 
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof GFCross){
+			if(numInputs == ((GFCross)func).numInputs){
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

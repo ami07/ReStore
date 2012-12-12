@@ -26,6 +26,9 @@ import org.apache.hadoop.util.bloom.Key;
 
 import org.apache.pig.Algebraic;
 import org.apache.pig.EvalFunc;
+import org.apache.pig.builtin.AVG.Final;
+import org.apache.pig.builtin.AVG.Initial;
+import org.apache.pig.builtin.AVG.Intermediate;
 import org.apache.pig.data.DataBag;
 import org.apache.pig.data.DataByteArray;
 import org.apache.pig.data.DataType;
@@ -143,6 +146,17 @@ public class BuildBloom extends BuildBloomBase<DataByteArray> implements Algebra
 
             return TupleFactory.getInstance().newTuple(bloomOut());
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Initial){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Intermediate extends BuildBloomBase<Tuple> {
@@ -168,6 +182,17 @@ public class BuildBloom extends BuildBloomBase<DataByteArray> implements Algebra
         public Tuple exec(Tuple input) throws IOException {
             return TupleFactory.getInstance().newTuple(bloomOr(input));
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Intermediate){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Final extends BuildBloomBase<DataByteArray> {
@@ -192,6 +217,17 @@ public class BuildBloom extends BuildBloomBase<DataByteArray> implements Algebra
         public DataByteArray exec(Tuple input) throws IOException {
             return bloomOr(input);
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Final){
+				return true;
+			}
+			return false;
+		}
     }
 
     @Override
@@ -199,4 +235,15 @@ public class BuildBloom extends BuildBloomBase<DataByteArray> implements Algebra
         return new Schema(new Schema.FieldSchema(null, DataType.BYTEARRAY)); 
     }
 
+
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof BuildBloom){
+			return true;
+		}
+		return false;
+	}
 }

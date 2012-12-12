@@ -52,4 +52,12 @@ public class DoubleRound extends EvalFunc<Long>{
 	public Schema outputSchema(Schema input) {
         return new Schema(new Schema.FieldSchema(getSchemaName(this.getClass().getName().toLowerCase(), input), DataType.LONG));
 	}
+	
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof DoubleRound){
+			return true;
+		}
+		return false;
+	}
 }

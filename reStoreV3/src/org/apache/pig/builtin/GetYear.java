@@ -94,5 +94,12 @@ public class GetYear extends EvalFunc<Integer> {
         return funcList;
     }
 
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof GetYear){
+			return true;
+		}
+		return false;
+	}
 }
 

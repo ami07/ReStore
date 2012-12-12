@@ -19,6 +19,7 @@ package org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOp
 
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.data.DataType;
@@ -89,4 +90,18 @@ public class PONot extends UnaryComparisonOperator {
         clone.cloneHelper(this);
         return clone;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof PONot){
+			//the other operator is also an PONot then there is a possibility of equivalence
+			if(expr.isEquivalent(((PONot) otherOP).expr)){
+				return true;
+			}
+		}
+		return false;
+	}
 }

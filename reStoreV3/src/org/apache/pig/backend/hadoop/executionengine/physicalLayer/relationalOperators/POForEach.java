@@ -779,4 +779,44 @@ public class POForEach extends PhysicalOperator {
             return (Tuple) out;
         }
     }
+    
+    /**
+   	 * @author iman
+   	 */
+       @Override
+   	public boolean isEquivalent(PhysicalOperator otherOP) {
+   		if(otherOP instanceof POForEach){
+   			//the other operator is also an POForEach then there is a possibility of equivalence
+   			List<PhysicalPlan> otherOpInputPlansRaw=((POForEach) otherOP).getInputPlans();
+   			List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherOpInputPlansRaw);
+   			for(int i=0;i<inputPlans.size();i++){
+   				PhysicalPlan plan=inputPlans.get(i);
+   				//for every physical plan, check if there is an equivalent plan in otherOp plans
+   				boolean foundEqPlan=false;
+   				for(PhysicalPlan otherPlan:otherOpInputPlans){
+   					if(plan.isEquivalent(otherPlan)){
+   						//find an equivalent plan, now check the flattening condition
+   						int otherIndex=otherOpInputPlansRaw.indexOf(otherPlan);
+   						if(isToBeFlattenedArray[i]==((POForEach) otherOP).isToBeFlattenedArray[otherIndex]){
+   							//the two plans and their flattening cond are equivalent
+   							//remove the found plan from the list of plans of the other op
+   							otherOpInputPlans.remove(otherPlan);
+   							//exit the current loop
+   							foundEqPlan=true;
+   							break;
+   						}else{
+   							//we could  find an equivalent plan, but with a diff flattening, then return false
+   							return false;
+   						}
+   					}
+   				}
+   				//we could not find an equivalent plan, then return false
+   				if(!foundEqPlan){
+   					return false;
+   				}
+   			}
+   			return true;
+   		}
+   		return false;
+   	}
 }

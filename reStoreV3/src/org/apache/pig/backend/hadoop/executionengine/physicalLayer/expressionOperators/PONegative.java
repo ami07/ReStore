@@ -19,6 +19,7 @@ package org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOp
 
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.data.DataType;
@@ -107,4 +108,18 @@ public class PONegative extends UnaryExpressionOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
         return (Tuple) out;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof PONegative){
+			//the other operator is also an PONegative then there is a possibility of equivalence
+			if(expr.isEquivalent(((PONegative) otherOP).expr)){
+				return true;
+			}
+		}
+		return false;
+	}
 }

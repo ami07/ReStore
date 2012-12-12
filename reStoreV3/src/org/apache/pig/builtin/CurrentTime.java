@@ -50,5 +50,13 @@ public class CurrentTime extends EvalFunc<DateTime> {
     public List<FuncSpec> getArgToFuncMapping() throws FrontendException {
         return new ArrayList<FuncSpec>();
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof CurrentTime){
+			return true;
+		}
+		return false;
+	}
     
 }

@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * COS implements a binding to the Java function
  * {@link java.lang.Math#cos(double) Math.cos(double)}. Given a single 
@@ -27,5 +29,16 @@ package org.apache.pig.builtin;
 public class COS extends DoubleBase{
 	Double compute(Double input){
 		return Math.cos(input);
+	}
+	
+	/**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof COS){
+			return true;
+		}
+		return false;
 	}
 }

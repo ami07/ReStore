@@ -157,5 +157,14 @@ public class JythonFunction extends EvalFunc<Object> {
             }
         }
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof JythonFunction){
+			return true;
+		}
+		return false;
+	}
 }
 

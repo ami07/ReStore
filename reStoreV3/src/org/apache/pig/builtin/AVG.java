@@ -129,6 +129,17 @@ public class AVG extends EvalFunc<Double> implements Algebraic, Accumulator<Doub
             }
                 
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Initial){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Intermediate extends EvalFunc<Tuple> {
@@ -146,6 +157,17 @@ public class AVG extends EvalFunc<Double> implements Algebraic, Accumulator<Doub
             
             }
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Intermediate){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Final extends EvalFunc<Double> {
@@ -174,6 +196,17 @@ public class AVG extends EvalFunc<Double> implements Algebraic, Accumulator<Doub
                 throw new ExecException(msg, errCode, PigException.BUG, e);           
             }
         }
+        
+        /**
+         * @author iman
+         */
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Final){
+				return true;
+			}
+			return false;
+		}
     }
 
     static protected Tuple combine(DataBag values) throws ExecException {
@@ -323,5 +356,16 @@ public class AVG extends EvalFunc<Double> implements Algebraic, Accumulator<Doub
             avg = new Double(intermediateSum / intermediateCount);
         }
         return avg;
-    }    
+    }   
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof AVG){
+			return true;
+		}
+		return false;
+	}    
 }

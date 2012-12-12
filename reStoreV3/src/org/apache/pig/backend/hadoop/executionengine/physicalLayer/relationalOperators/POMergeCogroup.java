@@ -602,4 +602,46 @@ public class POMergeCogroup extends PhysicalOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
         return null;
     }
+    
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+    	if(otherOP instanceof POMergeCogroup){
+    		if((inputs==null && ((POMergeCogroup) otherOP).inputs==null)
+    				||(inputs==null && ((POMergeCogroup) otherOP).inputs==null && isEquivalentList(inputs,((POMergeCogroup) otherOP).inputs))){
+    			
+    		}
+    	}
+		return false;
+	}
+    
+    /**
+	 * @author iman
+	 */
+	private boolean isEquivalentList(List<PhysicalOperator> list1, List<PhysicalOperator> list2){
+		List<PhysicalOperator> otherOperators= new ArrayList<PhysicalOperator>(list2);
+		for(int i=0;i<list1.size();i++){
+			PhysicalOperator op=list1.get(i);
+			//for every physical op, check if there is an equivalent op in list2
+			boolean foundEqOp=false;
+			for(PhysicalOperator otherOp:otherOperators){
+				if(op.isEquivalent(otherOp)){
+										
+					//the two ops are equivalent
+					//remove the found plan from the list of plans of the other op
+					otherOperators.remove(otherOp);
+					//exit the current loop
+					foundEqOp=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent op, then return false
+			if(!foundEqOp){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

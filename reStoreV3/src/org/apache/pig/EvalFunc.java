@@ -334,4 +334,17 @@ public abstract class EvalFunc<T>  {
     public Schema getInputSchema(){
     	return this.inputSchemaInternal;
     }
+    
+    /**
+     * Compares two functions and returns true if they are equivalent
+     * @param func
+     * @return
+     * @author iman
+     */
+    public  boolean isEquivalent(EvalFunc func){
+    	if(this.getClass()==func.getClass()){
+    		return true;
+    	}
+    	return false;
+    }
 }

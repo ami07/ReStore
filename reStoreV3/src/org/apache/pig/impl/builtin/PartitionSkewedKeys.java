@@ -314,4 +314,13 @@ public class PartitionSkewedKeys extends EvalFunc<Map<String, Object>> {
 		return true;
 	}
 
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof PartitionSkewedKeys){
+			return true;
+		}
+		return false;
+	}
+
 }

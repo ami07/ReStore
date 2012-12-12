@@ -93,4 +93,12 @@ public class GetWeekYear extends EvalFunc<Integer> {
 
         return funcList;
     }
+    
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof GetWeekYear){
+			return true;
+		}
+		return false;
+	}
 }

@@ -47,4 +47,13 @@ public class GFReplicate extends EvalFunc<DataBag> {
         return b;
     }
 
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof GFReplicate){
+			return true;
+		}
+		return false;
+	}
+
 }

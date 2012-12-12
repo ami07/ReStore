@@ -48,5 +48,14 @@ public abstract class AccumulatorEvalFunc<T> extends EvalFunc<T> implements Accu
         cleanup();
         return result;
     }
+    
+    @Override
+    public boolean isEquivalent(EvalFunc func) {
+    	// TODO Auto-generated method stub
+    	if(func instanceof AccumulatorEvalFunc){
+    		return true;
+    	}
+    	return false;
+    }
 
 }

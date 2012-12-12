@@ -493,6 +493,11 @@ public abstract class PhysicalOperator extends Operator<PhyPlanVisitor> implemen
     	return pigLogger;
     }
 
+    /**
+	 * @author iman
+	 */
+    public abstract boolean isEquivalent(PhysicalOperator otherOP);
+    
     public static class OriginalLocation implements Serializable {
         private String alias;
         private int line;

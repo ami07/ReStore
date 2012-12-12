@@ -75,4 +75,19 @@ public class FileSpec implements Serializable {
     public int hashCode() {
         return getFuncName().hashCode() + fileName.hashCode();
     }
+    
+    /**
+	 * @author iman
+	 */
+    public boolean isEquivalent(FileSpec file) {
+		if(file instanceof FileSpec){
+			//the other operator is also a FileSpec then there is a possibility of equivalence
+			if(fileName.equals(file.fileName) && funcSpec.isEquivalent(file.funcSpec)){
+				return true;
+			}
+		}
+		return false;
+	}
+    
+    
 }

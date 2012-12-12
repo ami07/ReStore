@@ -105,4 +105,12 @@ public class DaysBetween extends EvalFunc<Long> {
         funcList.add(new FuncSpec(this.getClass().getName(), s));
         return funcList;
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof DaysBetween){
+			return true;
+		}
+		return false;
+	}
 }

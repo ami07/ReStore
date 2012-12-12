@@ -174,6 +174,15 @@ public abstract class JrubyAlgebraicEvalFunc<T> extends AlgebraicEvalFunc<T> {
 
         @Override
         public abstract T exec(Tuple input) throws IOException;
+        
+        @Override
+        public boolean isEquivalent(EvalFunc func) {
+        	// TODO Auto-generated method stub
+        	if(func instanceof AlgebraicFunctionWrapper){
+        		return true;
+        	}
+        	return false;
+        }
     }
 
     @Override

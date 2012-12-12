@@ -213,4 +213,13 @@ public abstract class AlgebraicEvalFunc<T> extends AccumulatorEvalFunc<T> implem
         }
     }
 
+    @Override
+    public boolean isEquivalent(EvalFunc func) {
+    	// TODO Auto-generated method stub
+    	if(func instanceof AlgebraicEvalFunc){
+    		return true;
+    	}
+    	return false;
+    }
+
 }

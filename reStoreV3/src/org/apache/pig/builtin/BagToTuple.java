@@ -142,4 +142,15 @@ public class BagToTuple extends EvalFunc<Tuple> {
 		}
 	}
 
+
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof BagToTuple){
+			return true;
+		}
+		return false;
+	}
 }

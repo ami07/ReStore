@@ -24,6 +24,7 @@ import org.apache.pig.PigException;
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.data.DataType;
 import org.apache.pig.impl.plan.OperatorKey;
@@ -124,4 +125,18 @@ public class LTOrEqualToExpr extends BinaryComparisonOperator {
         clone.cloneHelper(this);
         return clone;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof LTOrEqualToExpr){
+			//the other operator is also an LessThanOrEqual then there is a possibility of equivalence
+			if(lhs.isEquivalent(((BinaryExpressionOperator) otherOP).getLhs())&& rhs.isEquivalent(((BinaryExpressionOperator) otherOP).getRhs())){
+				return true;
+			}
+		}
+		return false;
+	}
 }

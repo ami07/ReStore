@@ -27,4 +27,12 @@ public class OrdDesc extends ComparisonFunc {
     public int compare(Tuple t1, Tuple t2) {
         return t2.compareTo(t1);
     }
+
+	@Override
+	public boolean isEquivalent(ComparisonFunc func) {
+		if(func instanceof OrdDesc){
+			return true;
+		}
+		return false;
+	}
 }

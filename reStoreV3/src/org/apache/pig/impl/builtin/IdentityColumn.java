@@ -40,4 +40,13 @@ public class IdentityColumn extends EvalFunc<Object> {
         return input; 
     }
 
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof IdentityColumn){
+			return true;
+		}
+		return false;
+	}
+
 }

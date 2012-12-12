@@ -93,4 +93,12 @@ public class GetMonth extends EvalFunc<Integer> {
 
         return funcList;
     }
+    
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof GetMonth){
+			return true;
+		}
+		return false;
+	}
 }

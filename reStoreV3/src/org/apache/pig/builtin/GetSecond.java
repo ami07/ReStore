@@ -93,4 +93,12 @@ public class GetSecond extends EvalFunc<Integer> {
 
         return funcList;
     }
+    
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof GetSecond){
+			return true;
+		}
+		return false;
+	}
 }

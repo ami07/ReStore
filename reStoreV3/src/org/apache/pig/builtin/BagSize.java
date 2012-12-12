@@ -51,4 +51,14 @@ public class BagSize extends EvalFunc<Long> {
         return new Schema(new Schema.FieldSchema(null, DataType.LONG)); 
     }
 
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof BagSize){
+			return true;
+		}
+		return false;
+	}
 }

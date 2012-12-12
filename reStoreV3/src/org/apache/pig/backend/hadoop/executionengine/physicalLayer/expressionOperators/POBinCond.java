@@ -25,6 +25,7 @@ import org.joda.time.DateTime;
 
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.data.DataBag;
@@ -234,4 +235,18 @@ public class POBinCond extends ExpressionOperator {
         }
         return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POBinCond){
+			//the other operator is also an BinCond then there is a possibility of equivalence
+			if(cond.isEquivalent(((POBinCond) otherOP).cond) && lhs.isEquivalent(((POBinCond) otherOP).lhs)&& rhs.isEquivalent(((POBinCond) otherOP).rhs)){
+				return true;
+			}
+		}
+		return false;
+	}
 }

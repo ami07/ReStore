@@ -17,6 +17,8 @@
  */
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * This method should never be used directly, use {@link MIN}.
  */
@@ -31,6 +33,14 @@ public class FloatMin extends AlgebraicFloatMathBase {
         public KNOWN_OP getOp() {
             return KNOWN_OP.MIN;
                 }
+        
+        @Override
+    	public boolean isEquivalent(EvalFunc func) {
+    		if(func instanceof Intermediate){
+    			return true;
+    		}
+    		return false;
+    	}    
             }
 
     public static class Final extends AlgebraicFloatMathBase.Final {
@@ -38,6 +48,21 @@ public class FloatMin extends AlgebraicFloatMathBase {
         public KNOWN_OP getOp() {
             return KNOWN_OP.MIN;
             }
+        
+        @Override
+    	public boolean isEquivalent(EvalFunc func) {
+    		if(func instanceof Final){
+    			return true;
+    		}
+    		return false;
+    	}   
         }
 
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof FloatMin){
+			return true;
+		}
+		return false;
+	}    
 }

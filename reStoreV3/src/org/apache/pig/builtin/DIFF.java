@@ -99,5 +99,12 @@ public class DIFF extends EvalFunc<DataBag> {
 
     }
     
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof DIFF){
+			return true;
+		}
+		return false;
+	}
     
 }

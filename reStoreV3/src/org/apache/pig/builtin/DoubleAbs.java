@@ -18,10 +18,20 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 public class DoubleAbs extends DoubleBase {
 	
 	@Override
     Double compute(Double input) {
         return Math.abs(input);
+	}
+	
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof DoubleAbs){
+			return true;
+		}
+		return false;
 	}
 }

@@ -82,4 +82,15 @@ public class CONCAT extends EvalFunc<DataByteArray> {
         funcList.add(new FuncSpec(StringConcat.class.getName(), s));
         return funcList;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof CONCAT){
+			return true;
+		}
+		return false;
+	}
 }

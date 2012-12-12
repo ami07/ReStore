@@ -24,6 +24,7 @@ import org.apache.pig.Accumulator;
 import org.apache.pig.EvalFunc;
 import org.apache.pig.PigException;
 import org.apache.pig.backend.executionengine.ExecException;
+import org.apache.pig.builtin.AVG.Initial;
 import org.apache.pig.data.DataBag;
 import org.apache.pig.data.DataByteArray;
 import org.apache.pig.data.DataType;
@@ -158,6 +159,14 @@ public abstract class AlgebraicByteArrayMathBase extends AlgebraicMathBase<Doubl
                 throw new ExecException("Error executing an algebraic function", errCode, PigException.BUG, e);
             }
         }
+
+		@Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Initial){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public abstract class Final extends AlgebraicMathBase.Final<Double> {
@@ -210,4 +219,15 @@ public abstract class AlgebraicByteArrayMathBase extends AlgebraicMathBase<Doubl
     public Double getValue() {
         return intermediateVal;
     }
+    
+    /**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof AlgebraicByteArrayMathBase){
+			return true;
+		}
+		return false;
+	}
 }

@@ -526,4 +526,45 @@ public class POPartialAgg extends PhysicalOperator {
         }
     }
 
+	@Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POPartialAgg){
+			if(((keyPlan==null && ((POPartialAgg) otherOP).keyPlan==null)||(keyPlan!=null && ((POPartialAgg) otherOP).keyPlan!=null && keyPlan.isEquivalent(((POPartialAgg) otherOP).keyPlan)))
+					&& ((valuePlans==null && ((POPartialAgg) otherOP).valuePlans==null)||(valuePlans!=null && ((POPartialAgg) otherOP).valuePlans!=null && isEquivalentListOfPlans(valuePlans, ((POPartialAgg) otherOP).valuePlans)))){
+				
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan,
+					
+					//remove the found opr from the list of oprs of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
 }

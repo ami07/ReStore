@@ -259,5 +259,39 @@ public class FuncSpec implements Serializable, Cloneable {
         if (inputArgsSchema != null) s = inputArgsSchema.clone();
         return new FuncSpec(className, args, s);
     }
-    
+   
+    /**
+     * Compares two function specifications and returns true if they are equivalent
+     * @param funcSpec
+     * @return
+     * @author iman
+     */
+    public boolean isEquivalent(FuncSpec funcSpec) {
+		// TODO Auto-generated method stub
+    	if(className.equals(funcSpec.className) && isEquivalentList(ctorArgs, funcSpec.ctorArgs)){
+    		return true;
+    	}
+		return false;
+	}
+
+	private boolean isEquivalentList(String[] list1, String[] list2) {
+		if(list1==null && list2==null){
+			return true;
+		}else{
+			for(String item1:list1){
+				boolean found=false;
+				for(String item2:list2){
+					if(item1.equals(item2)){
+						found=true;
+						break;
+					}
+				}
+				if(!found){
+					return false;
+				}
+			}
+			return true;
+		}
+		
+	}
 }

@@ -24,6 +24,7 @@ import org.joda.time.DateTime;
 
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.data.DataBag;
@@ -191,4 +192,18 @@ public class ConstantExpression extends ExpressionOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
         return (Tuple) out;
     }
+    
+    @Override
+    /**
+	 * @author iman
+	 */
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof ConstantExpression){
+			//the other operator is also an constantExp then there is a possibility of equivalence
+			if(value.toString().equals(((ConstantExpression) otherOP).value.toString())){
+				return true;
+			}
+		}
+		return false;
+	}
 }

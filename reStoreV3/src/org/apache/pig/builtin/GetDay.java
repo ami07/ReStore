@@ -93,4 +93,12 @@ public class GetDay extends EvalFunc<Integer> {
 
         return funcList;
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof GetDay){
+			return true;
+		}
+		return false;
+	}
 }

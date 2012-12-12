@@ -17,6 +17,7 @@
  */
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
 import org.apache.pig.ExceptionalFunction;
 import org.apache.pig.PrimitiveEvalFunc;
 import org.apache.pig.impl.PigContext;
@@ -189,4 +190,12 @@ public class FunctionWrapperEvalFunc extends PrimitiveEvalFunc<Object, Object> {
             return function.apply((S)item);
         }
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof FunctionWrapperEvalFunc){
+			return true;
+		}
+		return false;
+	}
 }

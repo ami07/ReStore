@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.apache.pig.backend.executionengine.ExecException;
+import org.apache.pig.data.TargetedTuple;
 import org.apache.pig.data.Tuple;
 import org.apache.pig.data.AbstractTuple;
 
@@ -127,4 +128,15 @@ public class ExampleTuple extends AbstractTuple {
     public int compareTo(Object o) {
         return t.compareTo(o);
     }
+    
+    @Override
+	public boolean isEquivalent(Tuple tuple) {
+		if(tuple instanceof ExampleTuple){
+			//the other operator is also an  ExampleTuple then there is a possibility of equivalence
+			if(t.isEquivalent(((ExampleTuple) tuple).t) && expr.equals(((ExampleTuple) tuple).expr) && synthetic==((ExampleTuple) tuple).synthetic && omittable == ((ExampleTuple) tuple).omittable){
+				return true;
+			}
+		}
+		return false;
+	}
 }

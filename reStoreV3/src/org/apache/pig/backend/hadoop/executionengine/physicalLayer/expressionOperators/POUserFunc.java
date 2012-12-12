@@ -606,4 +606,22 @@ public class POUserFunc extends ExpressionOperator {
             this.func.setUDFContextSignature(signature);
         }
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POUserFunc){
+			//the other operator is also an POUserFunc then there is a possibility of equivalence
+			if(funcSpec!=null && ((POUserFunc) otherOP).funcSpec !=null 
+					&& funcSpec.isEquivalent(((POUserFunc) otherOP).funcSpec)
+					&& func!=null && ((POUserFunc) otherOP).func !=null 
+					&& func.getReturnType()==((POUserFunc) otherOP).func.getReturnType()
+					&& func.isEquivalent(((POUserFunc) otherOP).func)){
+				return true;
+			}
+		}
+		return false;
+	}
 }

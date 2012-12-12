@@ -175,4 +175,18 @@ public class PODistinct extends PhysicalOperator implements Cloneable {
         }
         return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof PODistinct){
+			//the other operator is also an PODistinct then there is a possibility of equivalence
+			if(resultType == ((PODistinct) otherOP).resultType ){
+				return true;
+			}
+		}
+		return false;
+	}
 }

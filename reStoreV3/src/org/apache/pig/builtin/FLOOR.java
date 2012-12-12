@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * FLOOR implements a binding to the Java function
  * {@link java.lang.Math#floor(double) Math.floor(double)}. Given a single 
@@ -28,5 +30,13 @@ package org.apache.pig.builtin;
 public class FLOOR extends DoubleBase{
 	Double compute(Double input){
 		return Math.floor(input);
+	}
+	
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof FLOOR){
+			return true;
+		}
+		return false;
 	}
 }

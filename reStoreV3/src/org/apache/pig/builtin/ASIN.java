@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * ASIN implements a binding to the Java function
  * {@link java.lang.Math#asin(double) Math.asin(double)} for computing the
@@ -28,5 +30,16 @@ package org.apache.pig.builtin;
 public class ASIN extends DoubleBase{
 	Double compute(Double input){
 		return Math.asin(input);
+	}
+	
+	/**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof ASIN){
+			return true;
+		}
+		return false;
 	}
 }

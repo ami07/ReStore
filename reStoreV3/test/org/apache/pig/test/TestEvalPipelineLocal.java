@@ -57,6 +57,7 @@ import org.apache.pig.impl.io.PigFile;
 import org.apache.pig.impl.logicalLayer.schema.Schema;
 import org.apache.pig.impl.util.Pair;
 import org.apache.pig.impl.util.UDFContext;
+import org.apache.pig.test.TestEvalPipeline.TupComp;
 import org.apache.pig.test.utils.Identity;
 import org.junit.Before;
 import org.junit.Test;
@@ -387,6 +388,14 @@ public class TestEvalPipelineLocal {
         public int compare(Tuple t1, Tuple t2) {
             return t1.compareTo(t2);
         }
+        
+        @Override
+		public boolean isEquivalent(ComparisonFunc func) {
+			if(func instanceof TupComp){
+				return true;
+			}
+			return false;
+		}
     }
 
     private void testSortDistinct(boolean eliminateDuplicates, boolean useUDF) throws Exception{

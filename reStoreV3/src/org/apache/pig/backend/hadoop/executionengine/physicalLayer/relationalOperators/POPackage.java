@@ -600,4 +600,31 @@ public class POPackage extends PhysicalOperator {
            } else
                return (Tuple) out;
        }
+
+	@Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POPackage){
+			//the other operator is also an POPackage then there is a possibility of equivalence
+			if(keyType== ((POPackage) otherOP).keyType && resultType == ((POPackage) otherOP).resultType && numInputs == ((POPackage) otherOP).numInputs){
+				//now check if the inner lists are equivalent
+				if(inner !=null && ((POPackage) otherOP).inner!=null && inner.length==((POPackage) otherOP).inner.length){
+					POPackage otherOPPackage= ((POPackage) otherOP);
+					for(int i=0;i<inner.length;i++){
+						if(!inner[i]==otherOPPackage.inner[i]){
+							return false;
+						}
+					}
+					return true;
+				}else if(inner ==null && ((POPackage) otherOP)==null){
+					return true;
+				}else{
+					return false;
+				}
+			}
+		}
+		return false;
+	}
+       
+       
+       
 }

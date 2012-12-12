@@ -68,5 +68,14 @@ public class GetMemNumRows extends EvalFunc<Tuple>{
     
     public Type getReturnType(){
         return Tuple.class;
-    }       
+    }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof GetMemNumRows){
+			return true;
+		}
+		return false;
+	}       
 }

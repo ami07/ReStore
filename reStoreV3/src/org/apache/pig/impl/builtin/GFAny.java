@@ -43,4 +43,13 @@ public class GFAny extends EvalFunc<Integer> {
     public Integer exec(Tuple input) throws IOException{
         return r.nextInt(numGroups);
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		if(func instanceof GFAny){
+			return true;
+		}
+		return false;
+	}
 }

@@ -89,6 +89,14 @@ public class Distinct  extends EvalFunc<DataBag> implements Algebraic {
                 throw e;
             }
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Initial){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Intermediate extends EvalFunc<Tuple> {
@@ -100,6 +108,14 @@ public class Distinct  extends EvalFunc<DataBag> implements Algebraic {
         public Tuple exec(Tuple input) throws IOException {
             return tupleFactory.newTuple(getDistinctFromNestedBags(input, this));
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Intermediate){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Final extends EvalFunc<DataBag> {
@@ -111,6 +127,14 @@ public class Distinct  extends EvalFunc<DataBag> implements Algebraic {
         public DataBag exec(Tuple input) throws IOException {
             return getDistinctFromNestedBags(input, this);
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Final){
+				return true;
+			}
+			return false;
+		}
     }
     
     static private DataBag createDataBag() {
@@ -169,4 +193,11 @@ public class Distinct  extends EvalFunc<DataBag> implements Algebraic {
         }
     }
 
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof Distinct){
+			return true;
+		}
+		return false;
+	}
 }

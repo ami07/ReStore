@@ -384,4 +384,105 @@ public class POSort extends PhysicalOperator {
         }
         return (Tuple) out;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof POSort){
+			//the other operator is also an POSort then there is a possibility of equivalence
+			if(isEquivalentListOfPlans(sortPlans,((POSort) otherOP).sortPlans ) && 
+					isEquivalentListOfBooleans(mAscCols, ((POSort) otherOP).mAscCols) && 
+					isEquivalentSortFunction(mSortFunc, ((POSort) otherOP).mSortFunc) &&
+					isEquivalentComparator(mComparator, ((POSort) otherOP).mComparator) && 
+					limit==((POSort) otherOP).limit &&
+					resultType==((POSort) otherOP).resultType){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentComparator(Comparator<Tuple> comparator1,
+			Comparator<Tuple> comparator2) {
+		if(comparator1==null && comparator2==null) return true;
+
+		if(comparator1!=null && comparator2!=null /*&& ((SortComparator) comparator1).isEquivalent(((SortComparator)comparator2))*/){
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentSortFunction(POUserComparisonFunc sortFunc1,
+			POUserComparisonFunc sortFunc2) {
+		if(sortFunc1==null && sortFunc2==null) return true;
+
+		if(sortFunc1!=null && sortFunc2!=null && sortFunc1.isEquivalent(sortFunc2)){
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		if(currentPlans==null && otherPlans==null) return true;
+		if(currentPlans==null || otherPlans==null) return false;
+		if(currentPlans!=null && otherPlans!=null && currentPlans.size()!=otherPlans.size()) return true;
+		
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan,
+					
+					//remove the found opr from the list of oprs of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	
+
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfBooleans(List<Boolean> currentBList, List<Boolean> otherBList){
+		if(currentBList==null && otherBList==null){
+			return true;
+		}
+		if(currentBList!=null && otherBList!=null && currentBList.size()==otherBList.size()){
+			for(int i=0; i<currentBList.size();i++){
+				if(currentBList.get(i)!=otherBList.get(i)){
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
+		
+	}
 }

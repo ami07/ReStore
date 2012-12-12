@@ -44,6 +44,7 @@ import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.test.PORead;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserComparisonFunc;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserFunc;
+import org.apache.pig.test.TestPOSort.WeirdComparator;
 import org.apache.pig.test.utils.GenRandomData;
 import org.junit.Test;
 
@@ -91,6 +92,14 @@ public class TestPOUserFunc extends TestCase {
 			int i2 = (Integer) o2 - 2;
 
 			return (int) (i1 * i1 - i2 * i2);
+		}
+		
+		@Override
+		public boolean isEquivalent(ComparisonFunc func) {
+			if(func instanceof WeirdComparator){
+				return true;
+			}
+			return false;
 		}
 
 	}

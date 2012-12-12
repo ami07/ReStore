@@ -49,4 +49,14 @@ public class ARITY extends EvalFunc<Integer> {
     public Schema outputSchema(Schema input) {
         return new Schema(new Schema.FieldSchema(null, DataType.INTEGER)); 
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		//arity does not have any vars so return true all the time
+		//any way it is depricated  
+		return true;
+	}
 }

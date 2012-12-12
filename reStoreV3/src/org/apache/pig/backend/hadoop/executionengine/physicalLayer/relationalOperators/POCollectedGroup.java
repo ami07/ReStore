@@ -278,4 +278,86 @@ public class POCollectedGroup extends PhysicalOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
         return null;
     }
+    
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POCollectedGroup){
+			//the other operator is also a POCollectedGroup, then there is a possibility of equivalence
+			if((plans==null && ((POCollectedGroup) otherOP).plans==null) || (plans!=null && ((POCollectedGroup) otherOP).plans!=null && isEquivalentListOfPlans(plans, ((POCollectedGroup) otherOP).plans))){
+				if((leafOps==null && ((POCollectedGroup) otherOP).leafOps==null) || (leafOps!=null && ((POCollectedGroup) otherOP).leafOps!=null && isEquivalentListOfOPs(leafOps, ((POCollectedGroup) otherOP).leafOps)) ){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+    
+    /**
+	 * 
+	 * @param leafOps2
+	 * @param leafOps3
+	 * @return
+	 * 
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfOPs(List<ExpressionOperator> currentLeafOps,
+			List<ExpressionOperator> otherLeafOps) {
+		
+		List<ExpressionOperator> otherTempLeafOps= new ArrayList<ExpressionOperator>(otherLeafOps);
+		for(int i=0;i<currentLeafOps.size();i++){
+			ExpressionOperator currentLeafOp=currentLeafOps.get(i);
+			//for every exp op, check if there is an equivalent exp op in otherLeafOps list
+			boolean foundEqLeafOp=false;
+			for(ExpressionOperator otherLeafOp:otherTempLeafOps){
+				if(currentLeafOp.isEquivalent(otherLeafOp)){
+					//find an equivalent plan, now check the flattening condition
+					
+					//the two LeafOps and their flattening cond are equivalent
+					//remove the found LeafOp from the list of LeafOps of the other op
+					otherTempLeafOps.remove(otherLeafOp);
+					//exit the current loop
+					foundEqLeafOp=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqLeafOp){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan, now check the flattening condition
+					
+					//the two plans and their flattening cond are equivalent
+					//remove the found plan from the list of plans of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

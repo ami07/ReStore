@@ -274,4 +274,10 @@ public class FindQuantiles extends EvalFunc<Map<String, Object>>{
     private boolean areEqual(Tuple it, Tuple tuple) {
         return mComparator.compare(it, tuple)==0;
     }
+
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		// TODO Auto-generated method stub
+		return true;
+	}
 }

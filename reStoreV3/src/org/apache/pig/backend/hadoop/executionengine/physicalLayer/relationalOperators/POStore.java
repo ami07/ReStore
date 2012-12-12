@@ -297,4 +297,20 @@ public class POStore extends PhysicalOperator {
     public void setStoreFunc(StoreFuncInterface storeFunc) {
         this.storer = storeFunc;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POStore){
+			//the other operator is also an BinCond then there is a possibility of equivalence
+			if(sFile!=null && ((POStore) otherOP).sFile!=null && sFile.isEquivalent(((POStore) otherOP).sFile)&&
+					((lFile==null && ((POStore) otherOP).lFile==null)||
+							(lFile==null && ((POStore) otherOP).lFile==null && lFile.isEquivalent(((POStore) otherOP).lFile)))){
+				return true;
+			}
+		}
+		return false;
+	}
 }

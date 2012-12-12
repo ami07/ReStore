@@ -18,11 +18,21 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * Given a single data atom it returns the Euler's number e raised to the power of input
  */
 public class EXP extends DoubleBase {
 	Double compute(Double input){
 		return Math.exp(input);
+	}
+	
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof EXP){
+			return true;
+		}
+		return false;
 	}
 }

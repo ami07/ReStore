@@ -126,4 +126,12 @@ public class CubeDimensions extends EvalFunc<DataBag> {
             throw new RuntimeException(e);
         }
     }
+    
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+    	if(func instanceof CubeDimensions){
+			return true;
+		}
+		return false;
+	}
 }

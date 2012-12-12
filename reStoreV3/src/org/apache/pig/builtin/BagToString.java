@@ -138,4 +138,15 @@ public class BagToString extends EvalFunc<String> {
 		}
 	}
 
+
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof BagToString){
+			return true;
+		}
+		return false;
+	}
 }

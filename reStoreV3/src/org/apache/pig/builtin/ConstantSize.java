@@ -49,5 +49,16 @@ public class ConstantSize extends EvalFunc<Long> {
     public Schema outputSchema(Schema input) {
         return new Schema(new Schema.FieldSchema(null, DataType.LONG)); 
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof ConstantSize){
+			return true;
+		}
+		return false;
+	}
 
 }

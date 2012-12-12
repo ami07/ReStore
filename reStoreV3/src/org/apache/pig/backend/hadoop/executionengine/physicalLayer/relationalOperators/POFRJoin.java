@@ -512,4 +512,82 @@ public class POFRJoin extends PhysicalOperator {
         // no op: all handled by the preceding POForEach
         return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof POFRJoin){
+			//the other operator is also an FRJoin then there is a possibility of equivalence
+			if(fragment==((POFRJoin) otherOP).fragment){
+				
+				List<PhysicalOperator> otherOpInputOPsRaw=((POFRJoin) otherOP).getInputs();
+				List<PhysicalOperator> otherOpInputOPs= new ArrayList<PhysicalOperator>(otherOpInputOPsRaw);
+				
+				for(int i=0;i<inputs.size();i++){
+					PhysicalOperator input=inputs.get(i);
+					boolean foundEqOp=false;
+					for(PhysicalOperator otherOpr:otherOpInputOPs){
+						if(input.isEquivalent(otherOpr)){
+							//find an equivalent opr, now check the list of associated plans
+							List<PhysicalPlan> currentPlans=phyPlanLists.get(i);
+							int otherIndex=otherOpInputOPsRaw.indexOf(otherOpr);
+							List<PhysicalPlan> otherPlans=((POFRJoin) otherOP).phyPlanLists.get(otherIndex);
+							if(isEquivalentListOfPlans(currentPlans,otherPlans)){
+								//equiv ops and their list of plans
+								//remove the found plan from the list of plans of the other op
+								otherOpInputOPs.remove(otherOpr);
+								//exit the current loop
+								foundEqOp=true;
+								break;
+							}else{
+								//we could  find an equivalent op, but with a diff list of expressions, then return false
+								return false;
+							}
+							
+							
+						}
+					}
+					//we could not find an equivalent plan, then return false
+					if(!foundEqOp){
+						return false;
+					}
+				}
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @author iman
+	 */
+	private boolean isEquivalentListOfPlans(List<PhysicalPlan> currentPlans, List<PhysicalPlan> otherPlans){
+		List<PhysicalPlan> otherOpInputPlans= new ArrayList<PhysicalPlan>(otherPlans);
+		for(int i=0;i<currentPlans.size();i++){
+			PhysicalPlan plan=currentPlans.get(i);
+			//for every physical plan, check if there is an equivalent plan in otherOp plans
+			boolean foundEqPlan=false;
+			for(PhysicalPlan otherPlan:otherOpInputPlans){
+				if(plan.isEquivalent(otherPlan)){
+					//find an equivalent plan, now check the flattening condition
+					
+					//the two plans and their flattening cond are equivalent
+					//remove the found plan from the list of plans of the other op
+					otherOpInputPlans.remove(otherPlan);
+					//exit the current loop
+					foundEqPlan=true;
+					break;
+					
+				}
+			}
+			//we could not find an equivalent plan, then return false
+			if(!foundEqPlan){
+				return false;
+			}
+		}
+		
+		return true;
+	}
 }

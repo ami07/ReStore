@@ -18,6 +18,8 @@
 
 package org.apache.pig.builtin;
 
+import org.apache.pig.EvalFunc;
+
 /**
  * COSH implements a binding to the Java function
  * {@link java.lang.Math#cosh(double) Math.cosh(double)}. Given a single 
@@ -28,5 +30,16 @@ public class COSH extends DoubleBase{
 	Double compute(Double input){
 		return Math.cosh(input);
 		
+	}
+	
+	/**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof COSH){
+			return true;
+		}
+		return false;
 	}
 }

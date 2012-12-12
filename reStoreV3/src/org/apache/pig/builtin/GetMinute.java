@@ -93,4 +93,12 @@ public class GetMinute extends EvalFunc<Integer> {
 
         return funcList;
     }
+    
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof GetMinute){
+			return true;
+		}
+		return false;
+	}
 }

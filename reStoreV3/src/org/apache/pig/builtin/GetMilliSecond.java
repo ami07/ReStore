@@ -93,4 +93,12 @@ public class GetMilliSecond extends EvalFunc<Integer> {
 
         return funcList;
     }
+    
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof GetMilliSecond){
+			return true;
+		}
+		return false;
+	}
 }

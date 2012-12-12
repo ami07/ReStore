@@ -165,4 +165,15 @@ public class TargetedTuple extends AbstractTuple {
     public int hashCode() {
         return t.hashCode();
     }
+
+	@Override
+	public boolean isEquivalent(Tuple tuple) {
+		if(tuple instanceof TargetedTuple){
+			//the other operator is also an  TargetedTuple then there is a possibility of equivalence
+			if(t.isEquivalent(((TargetedTuple) tuple).t) && targetOps.containsAll(((TargetedTuple) tuple).getTargetOps())){
+				return true;
+			}
+		}
+		return false;
+	}
 }

@@ -300,6 +300,28 @@ public class PhysicalPlan extends OperatorPlan<PhysicalOperator> implements Clon
         return clone;
     }
     
+    /**
+	 * @author iman
+	 */
+	public boolean isEquivalent(PhysicalPlan otherPlan) {
+		if(otherPlan instanceof PhysicalPlan){
+			//the other operator is also an PhysicalPlan then there is a possibility of equivalence
+			//PlanWalker<PhysicalOperator, PhysicalPlan> planWalker ;
+			boolean equivalentPlans=false;
+			/*PhyPlanComparator planComparator = new PhyPlanComparator(this,otherPlan);
+			try {
+				return planComparator.visit(otherPlan);
+			} catch (VisitorException e) {
+				//TODO add the proper catch code
+				e.printStackTrace();
+			}*/
+			if(equivalentPlans ){
+				return true;
+			}
+		}
+		return false;
+	}
+	
     public void setOpMap(MultiMap<PhysicalOperator, PhysicalOperator> opmap) {
         this.opmap = opmap;
     }

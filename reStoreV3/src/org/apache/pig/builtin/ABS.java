@@ -76,5 +76,16 @@ public class ABS extends EvalFunc<Double>{
         funcList.add(new FuncSpec(LongAbs.class.getName(),  new Schema(new Schema.FieldSchema(null, DataType.LONG))));
         return funcList;
     }
+    
+    /**
+     * @author iman
+     */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+    	if(func instanceof ABS){
+			return true;
+		}
+		return false;
+	}
 
 }

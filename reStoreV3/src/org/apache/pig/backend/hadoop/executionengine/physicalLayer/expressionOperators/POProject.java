@@ -28,6 +28,7 @@ import org.apache.pig.PigException;
 import org.apache.pig.PigWarning;
 import org.apache.pig.backend.executionengine.ExecException;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.POStatus;
+import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.Result;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor;
 import org.apache.pig.data.BagFactory;
@@ -605,4 +606,18 @@ public class POProject extends ExpressionOperator {
         }
         return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POProject){
+			//the other operator is also an POProject then there is a possibility of equivalence
+			if(resultType == ((POProject) otherOP).resultType && columns.containsAll(((POProject) otherOP).columns)&& startCol == ((POProject) otherOP).startCol && isProjectToEnd == ((POProject) otherOP).isProjectToEnd && overloaded==((POProject) otherOP).overloaded){
+				return true;
+			}
+		}
+		return false;
+	}
 }

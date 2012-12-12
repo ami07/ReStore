@@ -175,4 +175,20 @@ public class POLimit extends PhysicalOperator {
         }
         return (Tuple) in;
     }
+    
+    /**
+   	 * @author iman
+   	 */
+       @Override
+   	public boolean isEquivalent(PhysicalOperator otherOP) {
+   		// TODO Auto-generated method stub
+   		if(otherOP instanceof POLimit){
+   			//the other operator is also an POLimit then there is a possibility of equivalence
+   			if(mLimit == ((POLimit) otherOP).mLimit && resultType == ((POLimit) otherOP).resultType &&
+   					((expressionPlan==null && ((POLimit)otherOP).expressionPlan == null)||(expressionPlan==null && ((POLimit)otherOP).expressionPlan == null && expressionPlan.isEquivalent(((POLimit)otherOP).expressionPlan)))){
+   				return true;
+   			}
+   		}
+   		return false;
+   	} 
 }

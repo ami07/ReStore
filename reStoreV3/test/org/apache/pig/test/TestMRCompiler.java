@@ -72,6 +72,7 @@ import org.apache.pig.impl.builtin.GFCross;
 import org.apache.pig.impl.plan.NodeIdGenerator;
 import org.apache.pig.impl.plan.OperatorKey;
 import org.apache.pig.impl.util.Utils;
+import org.apache.pig.test.TestPOSort.WeirdComparator;
 import org.apache.pig.test.junit.OrderedJUnit4Runner;
 import org.apache.pig.test.junit.OrderedJUnit4Runner.TestOrder;
 import org.apache.pig.test.utils.GenPhyOp;
@@ -1006,6 +1007,14 @@ public class TestMRCompiler {
             }
             return result;
         }
+        
+        @Override
+		public boolean isEquivalent(ComparisonFunc func) {
+			if(func instanceof WeirdComparator){
+				return true;
+			}
+			return false;
+		}
     }
 
     @Test

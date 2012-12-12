@@ -104,6 +104,14 @@ public class DoubleAvg extends EvalFunc<Double> implements Algebraic, Accumulato
             }
                 
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Initial){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Intermediate extends EvalFunc<Tuple> {
@@ -120,6 +128,14 @@ public class DoubleAvg extends EvalFunc<Double> implements Algebraic, Accumulato
                 throw new ExecException(msg, errCode, PigException.BUG, e);            
             }
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Intermediate){
+				return true;
+			}
+			return false;
+		}
     }
 
     static public class Final extends EvalFunc<Double> {
@@ -148,6 +164,14 @@ public class DoubleAvg extends EvalFunc<Double> implements Algebraic, Accumulato
                 throw new ExecException(msg, errCode, PigException.BUG, e);            
             }
         }
+        
+        @Override
+		public boolean isEquivalent(EvalFunc func) {
+			if(func instanceof Final){
+				return true;
+			}
+			return false;
+		}
     }
 
     static protected Tuple combine(DataBag values) throws ExecException {
@@ -280,5 +304,13 @@ public class DoubleAvg extends EvalFunc<Double> implements Algebraic, Accumulato
             avg = new Double(intermediateSum / intermediateCount);
         }
         return avg;
-    }    
+    }   
+    
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof DoubleAvg){
+			return true;
+		}
+		return false;
+	}
 }

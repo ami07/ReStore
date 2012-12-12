@@ -31,6 +31,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.util.bloom.BloomFilter;
 import org.apache.hadoop.util.bloom.Key;
 
+import org.apache.pig.EvalFunc;
 import org.apache.pig.FilterFunc;
 import org.apache.pig.data.DataByteArray;
 import org.apache.pig.data.DataType;
@@ -115,4 +116,15 @@ public class Bloom extends FilterFunc {
         return p.replace("/", "_");
     }
 
+
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof Bloom){
+			return true;
+		}
+		return false;
+	}
 }

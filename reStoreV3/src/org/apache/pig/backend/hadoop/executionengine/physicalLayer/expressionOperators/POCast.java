@@ -1769,4 +1769,18 @@ public class POCast extends ExpressionOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
       return (Tuple) out;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		if(otherOP instanceof POCast){
+			//the other operator is also an POCast then there is a possibility of equivalence
+			if(resultType == ((POCast) otherOP).resultType){
+				return true;
+			}
+		}
+		return false;
+	}
 }

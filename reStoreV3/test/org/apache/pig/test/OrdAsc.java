@@ -27,4 +27,12 @@ public class OrdAsc extends ComparisonFunc {
     public int compare(Tuple t1, Tuple t2) {
         return t1.compareTo(t2);
     }
+
+	@Override
+	public boolean isEquivalent(ComparisonFunc func) {
+		if(func instanceof OrdAsc){
+			return true;
+		}
+		return false;
+	}
 }

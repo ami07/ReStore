@@ -49,4 +49,12 @@ public class FloatAbs extends EvalFunc<Float>{
 	public Schema outputSchema(Schema input) {
         return new Schema(new Schema.FieldSchema(getSchemaName(this.getClass().getName().toLowerCase(), input), DataType.FLOAT));
 	}
+	
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof FloatAbs){
+			return true;
+		}
+		return false;
+	}
 }

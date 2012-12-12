@@ -74,4 +74,15 @@ public class AddDuration extends EvalFunc<DateTime> {
         funcList.add(new FuncSpec(this.getClass().getName(), s));
         return funcList;
     }
+    
+    /**
+     * @author iman
+     */
+	@Override
+	public boolean isEquivalent(EvalFunc func) {
+		if(func instanceof AddDuration){
+			return true;
+		}
+		return false;
+	}
 }

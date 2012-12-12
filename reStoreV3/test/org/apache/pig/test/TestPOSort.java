@@ -650,5 +650,13 @@ public class TestPOSort extends TestCase {
 			return result;
 		}
 
+		@Override
+		public boolean isEquivalent(ComparisonFunc func) {
+			if(func instanceof WeirdComparator){
+				return true;
+			}
+			return false;
+		}
+
 	}
 }

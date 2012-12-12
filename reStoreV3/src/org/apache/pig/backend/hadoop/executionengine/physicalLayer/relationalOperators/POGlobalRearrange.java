@@ -110,4 +110,18 @@ public class POGlobalRearrange extends PhysicalOperator {
     public Tuple illustratorMarkup(Object in, Object out, int eqClassIndex) {
       return null;
     }
+    
+    /**
+	 * @author iman
+	 */
+    @Override
+	public boolean isEquivalent(PhysicalOperator otherOP) {
+		// TODO Auto-generated method stub
+		if(otherOP instanceof POGlobalRearrange){
+			//the other operator is also an POGlobalRearrange then there is a possibility of equivalence
+			//it does not have any other information to compare
+				return true;
+		}
+		return false;
+	}
 }
