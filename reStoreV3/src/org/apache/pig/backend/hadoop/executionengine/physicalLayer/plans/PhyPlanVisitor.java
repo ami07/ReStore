@@ -22,6 +22,7 @@ import java.util.List;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.*;
 import org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.*;
+import org.apache.pig.impl.plan.Operator;
 import org.apache.pig.impl.plan.PlanVisitor;
 import org.apache.pig.impl.plan.PlanWalker;
 import org.apache.pig.impl.plan.VisitorException;
@@ -312,5 +313,9 @@ public class PhyPlanVisitor extends PlanVisitor<PhysicalOperator,PhysicalPlan> {
     public void visitPartialAgg(POPartialAgg poPartialAgg) {
     }
 
+    public List<Operator> visitPhyOp(PhysicalOperator physicalOperator, List<Operator> ops) throws VisitorException {
+		//do nothing
+		return null;
+	}
 
 }

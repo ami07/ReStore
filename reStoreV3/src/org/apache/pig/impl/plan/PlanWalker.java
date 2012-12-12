@@ -46,6 +46,18 @@ public abstract class PlanWalker <O extends Operator,
     public abstract void walk(PlanVisitor<O, P> visitor) throws VisitorException;
 
     /**
+     * Begin traversing the graph.
+     * @param visitor Visitor this walker is being used by.  This can't be set in
+     * the constructor because the visitor is constructing this class, and does
+     * not yet have a 'this' pointer to send as an argument.
+     * @param otherPlan other plan to visit along this one
+     * @throws VisitorException if an error is encountered while walking.
+	 *
+     */
+    public boolean walk(PlanVisitor<O, P> visitor, P otherPlan) throws VisitorException{
+    	return false;
+    }
+    /**
      * Return a new instance of this same type of walker for a subplan.
      * When this method is called the same type of walker with the
      * provided plan set as the plan, must be returned.  This can then be

@@ -317,6 +317,11 @@ public abstract class PhysicalOperator extends Operator<PhyPlanVisitor> implemen
     @Override
     public abstract void visit(PhyPlanVisitor v) throws VisitorException;
 
+    @Override
+    public List<Operator> visit(PhyPlanVisitor v,List<Operator> pOps) throws VisitorException {
+        return v.visitPhyOp(this, pOps);
+    }
+    
     /**
      * Implementations that call into the different versions of getNext are often
      * identical, differing only in the signature of the getNext() call they make.

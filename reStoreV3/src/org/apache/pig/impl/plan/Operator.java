@@ -64,6 +64,27 @@ abstract public class Operator<V extends PlanVisitor> implements Serializable, C
      */
     public abstract void visit(V v) throws VisitorException;
 
+    
+    /**
+     * Visit this node with the provided visitor. This should only be called by
+     * the visitor class itself, never directly.
+     * 
+     * @param v
+     *            Visitor to visit with.
+     * @param mrOps List of sibling operators to take into account
+     *              when visiting this operator           
+     *            
+     * @throws VisitorException
+     *             if the visitor has a problem.
+	 * @author iman
+     */
+    public List<Operator> visit(V v, List<Operator> ops) throws VisitorException {
+    	//TODO
+    	//for now do nothing.. 
+    	//i did not make it abstract so not every operator has to implement it! 
+    	return null;
+    }
+    
     /**
      * Indicates whether this operator supports multiple inputs.
      * 
