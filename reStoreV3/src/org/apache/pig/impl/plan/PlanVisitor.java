@@ -55,6 +55,14 @@ abstract public class PlanVisitor <O extends Operator, P extends OperatorPlan<O>
         return mCurrentWalker.walk(this,otherPlan);
     }
     
+    /**
+     * Entry point for visiting the plan.
+     * @throws VisitorException if an error is encountered while visiting.
+     */
+    public O visit(P otherPlan,boolean returnLastMatch) throws VisitorException {
+        return mCurrentWalker.walk(otherPlan,this);
+    }
+    
     public P getPlan() {
         return mPlan;
     }

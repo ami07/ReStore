@@ -43,6 +43,17 @@ public class FileSpec implements Serializable {
         return fileName;
     }
     
+    /**
+     * updates the file name 
+     * @param fileName the new fileName to set the property of this FileSpec
+     */
+    public void setFileName(String fileName) {
+		if(fileName!=null){
+			this.fileName=new String(fileName);
+		}
+		
+	}
+    
     public FuncSpec getFuncSpec(){
         return funcSpec;
     }

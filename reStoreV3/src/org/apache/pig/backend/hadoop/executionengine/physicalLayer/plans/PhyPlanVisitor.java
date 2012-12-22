@@ -318,4 +318,14 @@ public class PhyPlanVisitor extends PlanVisitor<PhysicalOperator,PhysicalPlan> {
 		return null;
 	}
 
+    public Operator visitPhyOp(PhysicalOperator physicalOperator, List<Operator> ops,boolean returnLastMatch) throws VisitorException {
+		//do nothing
+		return null;
+	}
+	
+	
+    public void visitPhyOp(PhysicalOperator physicalOperator, Operator physicalOperatorReplica) throws VisitorException {
+		//do nothing
+		
+	}
 }

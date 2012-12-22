@@ -89,6 +89,32 @@ public abstract class OperatorPlan<E extends Operator> implements Iterable<E>, S
         mSoftToEdges = new MultiMap<E, E>();
     }
 
+    public OperatorPlan(OperatorPlan<E> copyPlan) {
+        mRoots = new ArrayList<E>();
+        mLeaves = new ArrayList<E>();
+        mOps = new HashMap<E, OperatorKey>(copyPlan.mOps);
+        mKeys = new HashMap<OperatorKey, E>(copyPlan.mKeys);
+        mFromEdges = new MultiMap<E, E>(copyPlan.mFromEdges);
+        mToEdges = new MultiMap<E, E>(copyPlan.mToEdges);
+        mSoftFromEdges = new MultiMap<E, E>(copyPlan.mSoftFromEdges);
+        mSoftToEdges = new MultiMap<E, E>(copyPlan.mSoftToEdges);
+    }
+    
+    /**
+     * resets all the files of this class
+     * 
+     */
+    public void resetPlan() {
+        mRoots = new ArrayList<E>();
+        mLeaves = new ArrayList<E>();
+        mOps = new HashMap<E, OperatorKey>();
+        mKeys = new HashMap<OperatorKey, E>();
+        mFromEdges = new MultiMap<E, E>();
+        mToEdges = new MultiMap<E, E>();
+        mSoftFromEdges = new MultiMap<E, E>();
+        mSoftToEdges = new MultiMap<E, E>();
+    }
+    
     /**
      * Get a list of all nodes in the graph that are roots.  A root is defined to
      * be a node that has no input.
@@ -671,6 +697,81 @@ public abstract class OperatorPlan<E extends Operator> implements Iterable<E>, S
 
     }
 
+    /**
+     * Replace an existing node in the graph with a list of new nodes.  The new nodes
+     * will be connected to all the nodes the old node was connected to.  The old node will
+     * be removed. The new node is assumed to have no incoming or outgoing edges
+     * @param oldNode Node to be replaced
+     * @param newNodes Nodes to be added in place of oldNode
+     * @throws PlanException
+     */
+    public void replace(E oldNode, List<E> newNodes) throws PlanException {
+    	checkInPlan(oldNode);
+    	//add the new nodes
+    	for(E newNode:newNodes){
+    		add(newNode);
+    	}
+    	
+    	List<E> oldNodeSuccs = (getSuccessors(oldNode) == null? null : new ArrayList<E>(getSuccessors(oldNode)));
+        List<IndexHelper<E>> indexHelpers = new ArrayList<IndexHelper<E>>();
+        if(oldNodeSuccs != null) {
+            for(int i = 0; i < oldNodeSuccs.size(); ++i) {
+                E oldNodeSucc = oldNodeSuccs.get(i);
+                indexHelpers.add(new IndexHelper<E>(new ArrayList<E>(getPredecessors(oldNodeSucc))));
+            }
+        }
+        
+        for(E newNode:newNodes){
+	        mToEdges = generateNewMap(oldNode, newNode, mToEdges);
+	        mFromEdges = generateNewMap(oldNode, newNode, mFromEdges);
+	        
+	        //ensure that the oldNode's successors are rewired
+	        if(oldNodeSuccs != null) {
+	            for(int i = 0; i < oldNodeSuccs.size(); ++i) {
+	                E oldNodeSucc = oldNodeSuccs.get(i);
+	                oldNodeSucc.rewire(oldNode, indexHelpers.get(i).getIndex(oldNode), newNode, true);
+	            }
+	        }
+        }
+        remove(oldNode);
+        
+	}
+
+    /**
+     * Replace an existing node in the graph with a new node that also already exist in the graph.  The new node
+     * will be connected to all the nodes the old node was.  The old node will
+     * be removed. The new node could have incoming or outgoing edges that need to be fixed.
+     * @param oldNode Node to be replaced
+     * @param newNode Node to add in place of oldNode
+     * @throws PlanException
+     */
+    public void replaceWithExisting(E oldNode, E newNode) throws PlanException {
+        checkInPlan(oldNode);
+        checkInPlan(newNode);
+        //add(newNode);
+        
+        List<E> oldNodeSuccs = (getSuccessors(oldNode) == null? null : new ArrayList<E>(getSuccessors(oldNode)));
+        List<IndexHelper<E>> indexHelpers = new ArrayList<IndexHelper<E>>();
+        if(oldNodeSuccs != null) {
+            for(int i = 0; i < oldNodeSuccs.size(); ++i) {
+                E oldNodeSucc = oldNodeSuccs.get(i);
+                indexHelpers.add(new IndexHelper<E>(new ArrayList<E>(getPredecessors(oldNodeSucc))));
+            }
+        }
+        
+        mToEdges = generateNewMapNoDups(oldNode, newNode, mToEdges);
+        mFromEdges = generateNewMapNoDups(oldNode, newNode, mFromEdges);
+        
+        //ensure that the oldNode's successors are rewired
+        if(oldNodeSuccs != null) {
+            for(int i = 0; i < oldNodeSuccs.size(); ++i) {
+                E oldNodeSucc = oldNodeSuccs.get(i);
+                oldNodeSucc.rewire(oldNode, indexHelpers.get(i).getIndex(oldNode), newNode, true);
+            }
+        }
+        remove(oldNode);
+    }
+    
     private MultiMap<E, E> generateNewMap(
             E oldNode,
             E newNode,
@@ -700,6 +801,60 @@ public abstract class OperatorPlan<E extends Operator> implements Iterable<E>, S
         return newMap;
     }
 
+    /**
+     * This version of generateNewMap will guarantee that any edge is checked
+     * in case another edge with the same info is already there
+     * in the original @see generateNewMap(E oldNode, E newNode, MultiMap<E, E> mm) , the edge  is deleted 
+     * instead of being replaced 
+     * @param oldNode
+     * @param newNode
+     * @param mm
+	 * 
+     */
+    private MultiMap<E, E> generateNewMapNoDups(
+            E oldNode,
+            E newNode,
+            MultiMap<E, E> mm) {
+        // First, replace the key
+        Collection<E> targets = mm.get(oldNode);
+        Collection<E> targetsNewNode = mm.get(newNode);
+        
+        if (targets != null) {
+            mm.removeKey(oldNode);
+            mm.removeKey(newNode);
+            for(E target:targetsNewNode){
+            	if(!targets.contains(target)){
+            		targets.add(target);
+            	}
+            }
+            mm.put(newNode, targets);
+        }
+
+        // We can't just do a remove and add in the map because of our
+        // guarantee of not changing orders.  So we need to walk the lists and
+        // put the new node in the same slot as the old.
+
+        // Walk all the other keys and replace any references to the oldNode
+        // in their targets.
+        MultiMap<E, E> newMap = new MultiMap<E, E>(mm.size());
+        for (E key : mm.keySet()) {
+            Collection<E> c = mm.get(key);
+            ArrayList<E> al = new ArrayList<E>(c);
+            for (int i = 0; i < al.size(); i++) {
+                if (al.get(i) == oldNode){ 
+                	if(!al.contains(newNode)){
+                		al.set(i, newNode);
+                	}
+                }
+            }
+            //if we still have old nodes in al, then remove them
+            al.remove(oldNode);
+            newMap.put(key, al);
+        }
+        return newMap;
+    }
+
+    
     /**
      * Remove a node in a way that connects the node's predecessor (if any)
      * with the node's successor (if any).  This function does not handle the
@@ -1491,6 +1646,22 @@ public abstract class OperatorPlan<E extends Operator> implements Iterable<E>, S
         return;
 
     }
+    
+    /**
+     * Returns the map operators mOps
+     * @return mOps
+     */
+    public Set<E> getmOps() {
+		return mOps.keySet();
+	}
+    
+    /**
+     * Returns the map from edges mFromEdges
+     * @return mFromEdges
+     */
+    public MultiMap<E, E> getmFromEdges() {
+		return mFromEdges;
+	}
     
     /*
      * A helper class that computes the index of each reference in a list for a quick lookup
