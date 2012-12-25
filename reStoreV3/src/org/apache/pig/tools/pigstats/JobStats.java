@@ -184,6 +184,8 @@ public final class JobStats extends Operator {
     
     public long getHdfsBytesWritten() { return hdfsBytesWritten; }
     
+    public long getHdfsBytesRead() { return hdfsBytesRead; }//This added method is used by the sharedMapReducePlan to keep track of this info #ReStore
+    
     @SuppressWarnings("deprecation")
     public Counters getHadoopCounters() { return counters; }
     

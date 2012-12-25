@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g 2012-11-17 23:26:10
+// $ANTLR 3.4 /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g 2012-12-24 16:42:13
 
 package org.apache.pig.parser;
 
@@ -179,15 +179,15 @@ public class QueryLexer extends Lexer {
     public QueryLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g"; }
+    public String getGrammarFileName() { return "/home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g"; }
 
     // $ANTLR start "VOID"
     public final void mVOID() throws RecognitionException {
         try {
             int _type = VOID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:60:9: ( 'VOID' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:60:11: 'VOID'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:60:9: ( 'VOID' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:60:11: 'VOID'
             {
             match("VOID"); if (state.failed) return ;
 
@@ -209,8 +209,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = IMPORT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:63:9: ( 'IMPORT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:63:11: 'IMPORT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:63:9: ( 'IMPORT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:63:11: 'IMPORT'
             {
             match("IMPORT"); if (state.failed) return ;
 
@@ -232,8 +232,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = RETURNS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:66:9: ( 'RETURNS' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:66:11: 'RETURNS'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:66:9: ( 'RETURNS' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:66:11: 'RETURNS'
             {
             match("RETURNS"); if (state.failed) return ;
 
@@ -255,8 +255,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DEFINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:69:8: ( 'DEFINE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:69:10: 'DEFINE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:69:8: ( 'DEFINE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:69:10: 'DEFINE'
             {
             match("DEFINE"); if (state.failed) return ;
 
@@ -278,8 +278,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LOAD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:72:8: ( 'LOAD' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:72:10: 'LOAD'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:72:8: ( 'LOAD' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:72:10: 'LOAD'
             {
             match("LOAD"); if (state.failed) return ;
 
@@ -301,8 +301,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = FILTER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:75:8: ( 'FILTER' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:75:10: 'FILTER'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:75:8: ( 'FILTER' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:75:10: 'FILTER'
             {
             match("FILTER"); if (state.failed) return ;
 
@@ -324,8 +324,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = FOREACH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:78:9: ( 'FOREACH' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:78:11: 'FOREACH'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:78:9: ( 'FOREACH' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:78:11: 'FOREACH'
             {
             match("FOREACH"); if (state.failed) return ;
 
@@ -347,8 +347,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = ORDER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:81:9: ( 'ORDER' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:81:12: 'ORDER'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:81:9: ( 'ORDER' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:81:12: 'ORDER'
             {
             match("ORDER"); if (state.failed) return ;
 
@@ -370,8 +370,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = RANK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:84:8: ( 'RANK' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:84:11: 'RANK'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:84:8: ( 'RANK' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:84:11: 'RANK'
             {
             match("RANK"); if (state.failed) return ;
 
@@ -393,8 +393,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DENSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:87:9: ( 'DENSE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:87:12: 'DENSE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:87:9: ( 'DENSE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:87:12: 'DENSE'
             {
             match("DENSE"); if (state.failed) return ;
 
@@ -416,8 +416,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = CUBE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:90:9: ( 'CUBE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:90:11: 'CUBE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:90:9: ( 'CUBE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:90:11: 'CUBE'
             {
             match("CUBE"); if (state.failed) return ;
 
@@ -439,8 +439,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = ROLLUP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:93:8: ( 'ROLLUP' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:93:10: 'ROLLUP'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:93:8: ( 'ROLLUP' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:93:10: 'ROLLUP'
             {
             match("ROLLUP"); if (state.failed) return ;
 
@@ -462,8 +462,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DISTINCT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:96:10: ( 'DISTINCT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:96:12: 'DISTINCT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:96:10: ( 'DISTINCT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:96:12: 'DISTINCT'
             {
             match("DISTINCT"); if (state.failed) return ;
 
@@ -485,8 +485,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = COGROUP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:99:9: ( 'COGROUP' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:99:11: 'COGROUP'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:99:9: ( 'COGROUP' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:99:11: 'COGROUP'
             {
             match("COGROUP"); if (state.failed) return ;
 
@@ -508,8 +508,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = JOIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:102:6: ( 'JOIN' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:102:8: 'JOIN'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:102:6: ( 'JOIN' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:102:8: 'JOIN'
             {
             match("JOIN"); if (state.failed) return ;
 
@@ -531,8 +531,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = CROSS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:105:7: ( 'CROSS' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:105:9: 'CROSS'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:105:7: ( 'CROSS' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:105:9: 'CROSS'
             {
             match("CROSS"); if (state.failed) return ;
 
@@ -554,8 +554,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = UNION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:108:7: ( 'UNION' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:108:9: 'UNION'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:108:7: ( 'UNION' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:108:9: 'UNION'
             {
             match("UNION"); if (state.failed) return ;
 
@@ -577,8 +577,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = SPLIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:111:7: ( 'SPLIT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:111:9: 'SPLIT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:111:7: ( 'SPLIT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:111:9: 'SPLIT'
             {
             match("SPLIT"); if (state.failed) return ;
 
@@ -600,8 +600,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = INTO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:114:6: ( 'INTO' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:114:8: 'INTO'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:114:6: ( 'INTO' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:114:8: 'INTO'
             {
             match("INTO"); if (state.failed) return ;
 
@@ -623,8 +623,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:117:4: ( 'IF' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:117:6: 'IF'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:117:4: ( 'IF' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:117:6: 'IF'
             {
             match("IF"); if (state.failed) return ;
 
@@ -646,8 +646,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = OTHERWISE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:120:11: ( 'OTHERWISE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:120:13: 'OTHERWISE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:120:11: ( 'OTHERWISE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:120:13: 'OTHERWISE'
             {
             match("OTHERWISE"); if (state.failed) return ;
 
@@ -669,8 +669,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = ALL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:123:5: ( 'ALL' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:123:7: 'ALL'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:123:5: ( 'ALL' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:123:7: 'ALL'
             {
             match("ALL"); if (state.failed) return ;
 
@@ -692,8 +692,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = AS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:126:4: ( 'AS' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:126:6: 'AS'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:126:4: ( 'AS' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:126:6: 'AS'
             {
             match("AS"); if (state.failed) return ;
 
@@ -715,8 +715,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = BY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:129:4: ( 'BY' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:129:6: 'BY'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:129:4: ( 'BY' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:129:6: 'BY'
             {
             match("BY"); if (state.failed) return ;
 
@@ -738,8 +738,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = USING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:132:7: ( 'USING' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:132:9: 'USING'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:132:7: ( 'USING' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:132:9: 'USING'
             {
             match("USING"); if (state.failed) return ;
 
@@ -761,8 +761,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = INNER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:135:7: ( 'INNER' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:135:9: 'INNER'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:135:7: ( 'INNER' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:135:9: 'INNER'
             {
             match("INNER"); if (state.failed) return ;
 
@@ -784,8 +784,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = OUTER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:138:7: ( 'OUTER' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:138:9: 'OUTER'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:138:7: ( 'OUTER' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:138:9: 'OUTER'
             {
             match("OUTER"); if (state.failed) return ;
 
@@ -807,8 +807,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = ONSCHEMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:141:10: ( 'ONSCHEMA' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:141:12: 'ONSCHEMA'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:141:10: ( 'ONSCHEMA' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:141:12: 'ONSCHEMA'
             {
             match("ONSCHEMA"); if (state.failed) return ;
 
@@ -830,8 +830,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = PARALLEL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:144:10: ( 'PARALLEL' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:144:12: 'PARALLEL'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:144:10: ( 'PARALLEL' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:144:12: 'PARALLEL'
             {
             match("PARALLEL"); if (state.failed) return ;
 
@@ -853,8 +853,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = PARTITION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:147:11: ( 'PARTITION' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:147:13: 'PARTITION'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:147:11: ( 'PARTITION' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:147:13: 'PARTITION'
             {
             match("PARTITION"); if (state.failed) return ;
 
@@ -876,8 +876,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = GROUP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:150:7: ( 'GROUP' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:150:9: 'GROUP'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:150:7: ( 'GROUP' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:150:9: 'GROUP'
             {
             match("GROUP"); if (state.failed) return ;
 
@@ -899,8 +899,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:153:5: ( 'AND' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:153:7: 'AND'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:153:5: ( 'AND' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:153:7: 'AND'
             {
             match("AND"); if (state.failed) return ;
 
@@ -922,8 +922,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:156:4: ( 'OR' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:156:6: 'OR'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:156:4: ( 'OR' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:156:6: 'OR'
             {
             match("OR"); if (state.failed) return ;
 
@@ -945,8 +945,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:159:5: ( 'NOT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:159:7: 'NOT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:159:5: ( 'NOT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:159:7: 'NOT'
             {
             match("NOT"); if (state.failed) return ;
 
@@ -968,8 +968,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = GENERATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:162:10: ( 'GENERATE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:162:12: 'GENERATE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:162:10: ( 'GENERATE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:162:12: 'GENERATE'
             {
             match("GENERATE"); if (state.failed) return ;
 
@@ -991,8 +991,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = FLATTEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:165:9: ( 'FLATTEN' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:165:11: 'FLATTEN'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:165:9: ( 'FLATTEN' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:165:11: 'FLATTEN'
             {
             match("FLATTEN"); if (state.failed) return ;
 
@@ -1014,8 +1014,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = ASC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:168:5: ( 'ASC' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:168:7: 'ASC'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:168:5: ( 'ASC' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:168:7: 'ASC'
             {
             match("ASC"); if (state.failed) return ;
 
@@ -1037,8 +1037,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DESC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:171:6: ( 'DESC' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:171:8: 'DESC'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:171:6: ( 'DESC' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:171:8: 'DESC'
             {
             match("DESC"); if (state.failed) return ;
 
@@ -1060,8 +1060,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:174:9: ( 'BOOLEAN' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:174:11: 'BOOLEAN'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:174:9: ( 'BOOLEAN' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:174:11: 'BOOLEAN'
             {
             match("BOOLEAN"); if (state.failed) return ;
 
@@ -1083,8 +1083,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:177:5: ( 'INT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:177:7: 'INT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:177:5: ( 'INT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:177:7: 'INT'
             {
             match("INT"); if (state.failed) return ;
 
@@ -1106,8 +1106,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LONG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:180:6: ( 'LONG' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:180:8: 'LONG'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:180:6: ( 'LONG' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:180:8: 'LONG'
             {
             match("LONG"); if (state.failed) return ;
 
@@ -1129,8 +1129,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:183:7: ( 'FLOAT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:183:9: 'FLOAT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:183:7: ( 'FLOAT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:183:9: 'FLOAT'
             {
             match("FLOAT"); if (state.failed) return ;
 
@@ -1152,8 +1152,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:186:8: ( 'DOUBLE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:186:10: 'DOUBLE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:186:8: ( 'DOUBLE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:186:10: 'DOUBLE'
             {
             match("DOUBLE"); if (state.failed) return ;
 
@@ -1175,8 +1175,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DATETIME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:189:10: ( 'DATETIME' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:189:12: 'DATETIME'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:189:10: ( 'DATETIME' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:189:12: 'DATETIME'
             {
             match("DATETIME"); if (state.failed) return ;
 
@@ -1198,8 +1198,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = CHARARRAY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:192:11: ( 'CHARARRAY' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:192:13: 'CHARARRAY'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:192:11: ( 'CHARARRAY' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:192:13: 'CHARARRAY'
             {
             match("CHARARRAY"); if (state.failed) return ;
 
@@ -1221,8 +1221,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = BYTEARRAY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:195:11: ( 'BYTEARRAY' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:195:13: 'BYTEARRAY'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:195:11: ( 'BYTEARRAY' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:195:13: 'BYTEARRAY'
             {
             match("BYTEARRAY"); if (state.failed) return ;
 
@@ -1244,8 +1244,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = BAG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:198:5: ( 'BAG' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:198:7: 'BAG'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:198:5: ( 'BAG' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:198:7: 'BAG'
             {
             match("BAG"); if (state.failed) return ;
 
@@ -1267,8 +1267,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = TUPLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:201:7: ( 'TUPLE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:201:9: 'TUPLE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:201:7: ( 'TUPLE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:201:9: 'TUPLE'
             {
             match("TUPLE"); if (state.failed) return ;
 
@@ -1290,8 +1290,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = MAP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:204:5: ( 'MAP' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:204:7: 'MAP'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:204:5: ( 'MAP' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:204:7: 'MAP'
             {
             match("MAP"); if (state.failed) return ;
 
@@ -1313,8 +1313,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = IS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:207:4: ( 'IS' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:207:6: 'IS'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:207:4: ( 'IS' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:207:6: 'IS'
             {
             match("IS"); if (state.failed) return ;
 
@@ -1336,8 +1336,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STREAM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:210:8: ( 'STREAM' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:210:10: 'STREAM'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:210:8: ( 'STREAM' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:210:10: 'STREAM'
             {
             match("STREAM"); if (state.failed) return ;
 
@@ -1359,8 +1359,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = THROUGH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:213:9: ( 'THROUGH' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:213:11: 'THROUGH'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:213:9: ( 'THROUGH' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:213:11: 'THROUGH'
             {
             match("THROUGH"); if (state.failed) return ;
 
@@ -1382,8 +1382,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STORE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:216:7: ( 'STORE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:216:9: 'STORE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:216:7: ( 'STORE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:216:9: 'STORE'
             {
             match("STORE"); if (state.failed) return ;
 
@@ -1405,8 +1405,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = MAPREDUCE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:219:11: ( 'MAPREDUCE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:219:13: 'MAPREDUCE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:219:11: ( 'MAPREDUCE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:219:13: 'MAPREDUCE'
             {
             match("MAPREDUCE"); if (state.failed) return ;
 
@@ -1428,8 +1428,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = SHIP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:222:6: ( 'SHIP' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:222:8: 'SHIP'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:222:6: ( 'SHIP' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:222:8: 'SHIP'
             {
             match("SHIP"); if (state.failed) return ;
 
@@ -1451,8 +1451,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = CACHE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:225:7: ( 'CACHE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:225:9: 'CACHE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:225:7: ( 'CACHE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:225:9: 'CACHE'
             {
             match("CACHE"); if (state.failed) return ;
 
@@ -1474,8 +1474,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = INPUT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:228:7: ( 'INPUT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:228:9: 'INPUT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:228:7: ( 'INPUT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:228:9: 'INPUT'
             {
             match("INPUT"); if (state.failed) return ;
 
@@ -1497,8 +1497,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = OUTPUT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:231:8: ( 'OUTPUT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:231:10: 'OUTPUT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:231:8: ( 'OUTPUT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:231:10: 'OUTPUT'
             {
             match("OUTPUT"); if (state.failed) return ;
 
@@ -1520,8 +1520,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STDERROR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:234:10: ( 'STDERR' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:234:12: 'STDERR'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:234:10: ( 'STDERR' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:234:12: 'STDERR'
             {
             match("STDERR"); if (state.failed) return ;
 
@@ -1543,8 +1543,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STDIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:237:7: ( 'STDIN' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:237:9: 'STDIN'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:237:7: ( 'STDIN' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:237:9: 'STDIN'
             {
             match("STDIN"); if (state.failed) return ;
 
@@ -1566,8 +1566,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STDOUT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:240:8: ( 'STDOUT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:240:10: 'STDOUT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:240:8: ( 'STDOUT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:240:10: 'STDOUT'
             {
             match("STDOUT"); if (state.failed) return ;
 
@@ -1589,8 +1589,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LIMIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:243:7: ( 'LIMIT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:243:9: 'LIMIT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:243:7: ( 'LIMIT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:243:9: 'LIMIT'
             {
             match("LIMIT"); if (state.failed) return ;
 
@@ -1612,8 +1612,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = SAMPLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:246:8: ( 'SAMPLE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:246:10: 'SAMPLE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:246:8: ( 'SAMPLE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:246:10: 'SAMPLE'
             {
             match("SAMPLE"); if (state.failed) return ;
 
@@ -1635,8 +1635,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LEFT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:249:6: ( 'LEFT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:249:8: 'LEFT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:249:6: ( 'LEFT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:249:8: 'LEFT'
             {
             match("LEFT"); if (state.failed) return ;
 
@@ -1658,8 +1658,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = RIGHT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:252:7: ( 'RIGHT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:252:9: 'RIGHT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:252:7: ( 'RIGHT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:252:9: 'RIGHT'
             {
             match("RIGHT"); if (state.failed) return ;
 
@@ -1681,8 +1681,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = FULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:255:6: ( 'FULL' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:255:8: 'FULL'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:255:6: ( 'FULL' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:255:8: 'FULL'
             {
             match("FULL"); if (state.failed) return ;
 
@@ -1704,8 +1704,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STR_OP_EQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:258:11: ( 'EQ' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:258:13: 'EQ'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:258:11: ( 'EQ' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:258:13: 'EQ'
             {
             match("EQ"); if (state.failed) return ;
 
@@ -1727,8 +1727,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STR_OP_GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:261:11: ( 'GT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:261:13: 'GT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:261:11: ( 'GT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:261:13: 'GT'
             {
             match("GT"); if (state.failed) return ;
 
@@ -1750,8 +1750,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STR_OP_LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:264:11: ( 'LT' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:264:13: 'LT'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:264:11: ( 'LT' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:264:13: 'LT'
             {
             match("LT"); if (state.failed) return ;
 
@@ -1773,8 +1773,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STR_OP_GTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:267:12: ( 'GTE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:267:14: 'GTE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:267:12: ( 'GTE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:267:14: 'GTE'
             {
             match("GTE"); if (state.failed) return ;
 
@@ -1796,8 +1796,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STR_OP_LTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:270:12: ( 'LTE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:270:14: 'LTE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:270:12: ( 'LTE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:270:14: 'LTE'
             {
             match("LTE"); if (state.failed) return ;
 
@@ -1819,8 +1819,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STR_OP_NE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:273:11: ( 'NEQ' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:273:13: 'NEQ'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:273:11: ( 'NEQ' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:273:13: 'NEQ'
             {
             match("NEQ"); if (state.failed) return ;
 
@@ -1842,8 +1842,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STR_OP_MATCHES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:276:16: ( 'MATCHES' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:276:18: 'MATCHES'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:276:16: ( 'MATCHES' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:276:18: 'MATCHES'
             {
             match("MATCHES"); if (state.failed) return ;
 
@@ -1865,8 +1865,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:279:6: ( 'TRUE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:279:8: 'TRUE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:279:6: ( 'TRUE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:279:8: 'TRUE'
             {
             match("TRUE"); if (state.failed) return ;
 
@@ -1888,8 +1888,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:282:7: ( 'FALSE' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:282:9: 'FALSE'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:282:7: ( 'FALSE' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:282:9: 'FALSE'
             {
             match("FALSE"); if (state.failed) return ;
 
@@ -1911,8 +1911,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = NUM_OP_EQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:285:11: ( '==' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:285:13: '=='
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:285:11: ( '==' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:285:13: '=='
             {
             match("=="); if (state.failed) return ;
 
@@ -1934,8 +1934,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = NUM_OP_LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:288:11: ( '<' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:288:13: '<'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:288:11: ( '<' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:288:13: '<'
             {
             match('<'); if (state.failed) return ;
 
@@ -1955,8 +1955,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = NUM_OP_LTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:291:12: ( '<=' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:291:14: '<='
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:291:12: ( '<=' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:291:14: '<='
             {
             match("<="); if (state.failed) return ;
 
@@ -1978,8 +1978,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = NUM_OP_GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:294:11: ( '>' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:294:13: '>'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:294:11: ( '>' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:294:13: '>'
             {
             match('>'); if (state.failed) return ;
 
@@ -1999,8 +1999,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = NUM_OP_GTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:297:12: ( '>=' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:297:14: '>='
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:297:12: ( '>=' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:297:14: '>='
             {
             match(">="); if (state.failed) return ;
 
@@ -2022,8 +2022,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = NUM_OP_NE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:300:11: ( '!=' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:300:13: '!='
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:300:11: ( '!=' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:300:13: '!='
             {
             match("!="); if (state.failed) return ;
 
@@ -2043,8 +2043,8 @@ public class QueryLexer extends Lexer {
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:303:16: ( '0' .. '9' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:303:16: ( '0' .. '9' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                 input.consume();
@@ -2071,8 +2071,8 @@ public class QueryLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:306:17: ( 'A' .. 'Z' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:306:17: ( 'A' .. 'Z' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
                 input.consume();
@@ -2099,8 +2099,8 @@ public class QueryLexer extends Lexer {
     // $ANTLR start "SPECIALCHAR"
     public final void mSPECIALCHAR() throws RecognitionException {
         try {
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:309:22: ( '_' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:309:24: '_'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:309:22: ( '_' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:309:24: '_'
             {
             match('_'); if (state.failed) return ;
 
@@ -2117,13 +2117,13 @@ public class QueryLexer extends Lexer {
     // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
         try {
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:312:12: ( LETTER ( DIGIT | LETTER | SPECIALCHAR )* )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:312:14: LETTER ( DIGIT | LETTER | SPECIALCHAR )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:312:12: ( LETTER ( DIGIT | LETTER | SPECIALCHAR )* )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:312:14: LETTER ( DIGIT | LETTER | SPECIALCHAR )*
             {
             mLETTER(); if (state.failed) return ;
 
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:312:21: ( DIGIT | LETTER | SPECIALCHAR )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:312:21: ( DIGIT | LETTER | SPECIALCHAR )*
             loop1:
             do {
                 int alt1=2;
@@ -2136,7 +2136,7 @@ public class QueryLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_' ) {
             	        input.consume();
@@ -2174,8 +2174,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DCOLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:315:8: ( '::' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:315:10: '::'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:315:8: ( '::' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:315:10: '::'
             {
             match("::"); if (state.failed) return ;
 
@@ -2197,15 +2197,15 @@ public class QueryLexer extends Lexer {
         try {
             int _type = IDENTIFIER_L;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:14: ( ( ID DCOLON )=> ( ID DCOLON IDENTIFIER_L ) | ID )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:14: ( ( ID DCOLON )=> ( ID DCOLON IDENTIFIER_L ) | ID )
             int alt2=2;
             alt2 = dfa2.predict(input);
             switch (alt2) {
                 case 1 :
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:16: ( ID DCOLON )=> ( ID DCOLON IDENTIFIER_L )
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:16: ( ID DCOLON )=> ( ID DCOLON IDENTIFIER_L )
                     {
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:33: ( ID DCOLON IDENTIFIER_L )
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:35: ID DCOLON IDENTIFIER_L
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:33: ( ID DCOLON IDENTIFIER_L )
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:35: ID DCOLON IDENTIFIER_L
                     {
                     mID(); if (state.failed) return ;
 
@@ -2222,7 +2222,7 @@ public class QueryLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:319:14: ID
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:319:14: ID
                     {
                     mID(); if (state.failed) return ;
 
@@ -2243,7 +2243,7 @@ public class QueryLexer extends Lexer {
     // $ANTLR start "FLOATINGPOINT"
     public final void mFLOATINGPOINT() throws RecognitionException {
         try {
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:24: ( INTEGER ( PERIOD INTEGER )? | PERIOD INTEGER )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:24: ( INTEGER ( PERIOD INTEGER )? | PERIOD INTEGER )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -2263,12 +2263,12 @@ public class QueryLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:26: INTEGER ( PERIOD INTEGER )?
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:26: INTEGER ( PERIOD INTEGER )?
                     {
                     mINTEGER(); if (state.failed) return ;
 
 
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:34: ( PERIOD INTEGER )?
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:34: ( PERIOD INTEGER )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -2277,7 +2277,7 @@ public class QueryLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:36: PERIOD INTEGER
+                            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:36: PERIOD INTEGER
                             {
                             mPERIOD(); if (state.failed) return ;
 
@@ -2294,7 +2294,7 @@ public class QueryLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:56: PERIOD INTEGER
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:322:56: PERIOD INTEGER
                     {
                     mPERIOD(); if (state.failed) return ;
 
@@ -2319,10 +2319,10 @@ public class QueryLexer extends Lexer {
         try {
             int _type = INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:325:8: ( ( DIGIT )+ )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:325:10: ( DIGIT )+
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:325:8: ( ( DIGIT )+ )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:325:10: ( DIGIT )+
             {
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:325:10: ( DIGIT )+
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:325:10: ( DIGIT )+
             int cnt5=0;
             loop5:
             do {
@@ -2336,7 +2336,7 @@ public class QueryLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -2380,13 +2380,13 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LONGINTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:12: ( INTEGER ( 'L' )? )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:14: INTEGER ( 'L' )?
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:12: ( INTEGER ( 'L' )? )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:14: INTEGER ( 'L' )?
             {
             mINTEGER(); if (state.failed) return ;
 
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:22: ( 'L' )?
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:22: ( 'L' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2395,7 +2395,7 @@ public class QueryLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:24: 'L'
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:328:24: 'L'
                     {
                     match('L'); if (state.failed) return ;
 
@@ -2421,8 +2421,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DOLLARVAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:331:11: ( DOLLAR INTEGER )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:331:13: DOLLAR INTEGER
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:331:11: ( DOLLAR INTEGER )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:331:13: DOLLAR INTEGER
             {
             mDOLLAR(); if (state.failed) return ;
 
@@ -2446,13 +2446,13 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DOUBLENUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:14: ( FLOATINGPOINT ( 'E' ( MINUS | PLUS )? INTEGER )? )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:16: FLOATINGPOINT ( 'E' ( MINUS | PLUS )? INTEGER )?
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:14: ( FLOATINGPOINT ( 'E' ( MINUS | PLUS )? INTEGER )? )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:16: FLOATINGPOINT ( 'E' ( MINUS | PLUS )? INTEGER )?
             {
             mFLOATINGPOINT(); if (state.failed) return ;
 
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:30: ( 'E' ( MINUS | PLUS )? INTEGER )?
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:30: ( 'E' ( MINUS | PLUS )? INTEGER )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2461,11 +2461,11 @@ public class QueryLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:32: 'E' ( MINUS | PLUS )? INTEGER
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:32: 'E' ( MINUS | PLUS )? INTEGER
                     {
                     match('E'); if (state.failed) return ;
 
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:36: ( MINUS | PLUS )?
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:334:36: ( MINUS | PLUS )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -2474,7 +2474,7 @@ public class QueryLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
+                            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
                             {
                             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                                 input.consume();
@@ -2519,13 +2519,13 @@ public class QueryLexer extends Lexer {
         try {
             int _type = FLOATNUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:13: ( DOUBLENUMBER ( 'F' )? )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:15: DOUBLENUMBER ( 'F' )?
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:13: ( DOUBLENUMBER ( 'F' )? )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:15: DOUBLENUMBER ( 'F' )?
             {
             mDOUBLENUMBER(); if (state.failed) return ;
 
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:28: ( 'F' )?
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:28: ( 'F' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2534,7 +2534,7 @@ public class QueryLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:30: 'F'
+                    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:337:30: 'F'
                     {
                     match('F'); if (state.failed) return ;
 
@@ -2560,12 +2560,12 @@ public class QueryLexer extends Lexer {
         try {
             int _type = QUOTEDSTRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:14: ( '\\'' ( (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\'' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:17: '\\'' ( (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\''
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:14: ( '\\'' ( (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\'' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:17: '\\'' ( (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\''
             {
             match('\''); if (state.failed) return ;
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:22: ( (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:22: ( (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )*
             loop10:
             do {
                 int alt10=4;
@@ -2590,7 +2590,7 @@ public class QueryLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:26: (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:340:26: (~ ( '\\'' | '\\\\' | '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -2607,10 +2607,10 @@ public class QueryLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:341:26: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:341:26: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) )
             	    {
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:341:26: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) )
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:341:28: '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:341:26: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:341:28: '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' ) )
             	    {
             	    match('\\'); if (state.failed) return ;
 
@@ -2632,10 +2632,10 @@ public class QueryLexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:342:26: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:342:26: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
             	    {
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:342:26: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:342:28: '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:342:26: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:342:28: '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' )
             	    {
             	    match("\\U"); if (state.failed) return ;
 
@@ -2719,12 +2719,12 @@ public class QueryLexer extends Lexer {
         try {
             int _type = MULTILINE_QUOTEDSTRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:24: ( '\\'' ( (~ ( '\\'' | '\\\\' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\'' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:27: '\\'' ( (~ ( '\\'' | '\\\\' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\''
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:24: ( '\\'' ( (~ ( '\\'' | '\\\\' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\'' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:27: '\\'' ( (~ ( '\\'' | '\\\\' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )* '\\''
             {
             match('\''); if (state.failed) return ;
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:32: ( (~ ( '\\'' | '\\\\' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:32: ( (~ ( '\\'' | '\\\\' ) ) | ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) ) | ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ) )*
             loop11:
             do {
                 int alt11=4;
@@ -2749,7 +2749,7 @@ public class QueryLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:36: (~ ( '\\'' | '\\\\' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:350:36: (~ ( '\\'' | '\\\\' ) )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -2766,10 +2766,10 @@ public class QueryLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:351:36: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:351:36: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) )
             	    {
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:351:36: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) )
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:351:38: '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:351:36: ( '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:351:38: '\\\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\\\' | '\\'' | 'n' | 'r' ) )
             	    {
             	    match('\\'); if (state.failed) return ;
 
@@ -2791,10 +2791,10 @@ public class QueryLexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:352:36: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:352:36: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
             	    {
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:352:36: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:352:38: '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:352:36: ( '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) )
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:352:38: '\\\\U' ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' ) ( '0' .. '9' | 'A' .. 'F' )
             	    {
             	    match("\\U"); if (state.failed) return ;
 
@@ -2878,12 +2878,12 @@ public class QueryLexer extends Lexer {
         try {
             int _type = EXECCOMMAND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:360:13: ( '`' (~ ( '`' ) )* '`' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:360:15: '`' (~ ( '`' ) )* '`'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:360:13: ( '`' (~ ( '`' ) )* '`' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:360:15: '`' (~ ( '`' ) )* '`'
             {
             match('`'); if (state.failed) return ;
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:360:19: (~ ( '`' ) )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:360:19: (~ ( '`' ) )*
             loop12:
             do {
                 int alt12=2;
@@ -2896,7 +2896,7 @@ public class QueryLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '_')||(input.LA(1) >= 'a' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -2937,8 +2937,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = STAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:363:6: ( '*' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:363:8: '*'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:363:6: ( '*' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:363:8: '*'
             {
             match('*'); if (state.failed) return ;
 
@@ -2958,8 +2958,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:366:7: ( ':' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:366:9: ':'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:366:7: ( ':' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:366:9: ':'
             {
             match(':'); if (state.failed) return ;
 
@@ -2979,8 +2979,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DOLLAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:369:8: ( '$' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:369:10: '$'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:369:8: ( '$' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:369:10: '$'
             {
             match('$'); if (state.failed) return ;
 
@@ -3000,8 +3000,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:372:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:372:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:372:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:372:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
                 input.consume();
@@ -3033,14 +3033,14 @@ public class QueryLexer extends Lexer {
         try {
             int _type = SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:375:12: ( '--' (~ ( '\\r' | '\\n' ) )* )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:375:14: '--' (~ ( '\\r' | '\\n' ) )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:375:12: ( '--' (~ ( '\\r' | '\\n' ) )* )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:375:14: '--' (~ ( '\\r' | '\\n' ) )*
             {
             match("--"); if (state.failed) return ;
 
 
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:375:19: (~ ( '\\r' | '\\n' ) )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:375:19: (~ ( '\\r' | '\\n' ) )*
             loop13:
             do {
                 int alt13=2;
@@ -3053,7 +3053,7 @@ public class QueryLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -3094,14 +3094,14 @@ public class QueryLexer extends Lexer {
         try {
             int _type = ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:12: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:14: '/*' ( options {greedy=false; } : . )* '*/'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:12: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:14: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); if (state.failed) return ;
 
 
 
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:19: ( options {greedy=false; } : . )*
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:19: ( options {greedy=false; } : . )*
             loop14:
             do {
                 int alt14=2;
@@ -3126,7 +3126,7 @@ public class QueryLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:49: .
+            	    // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:378:49: .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -3161,8 +3161,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = SEMI_COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:381:12: ( ';' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:381:14: ';'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:381:12: ( ';' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:381:14: ';'
             {
             match(';'); if (state.failed) return ;
 
@@ -3182,8 +3182,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LEFT_PAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:384:12: ( '(' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:384:14: '('
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:384:12: ( '(' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:384:14: '('
             {
             match('('); if (state.failed) return ;
 
@@ -3203,8 +3203,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = RIGHT_PAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:387:13: ( ')' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:387:15: ')'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:387:13: ( ')' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:387:15: ')'
             {
             match(')'); if (state.failed) return ;
 
@@ -3224,8 +3224,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LEFT_CURLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:390:12: ( '{' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:390:14: '{'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:390:12: ( '{' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:390:14: '{'
             {
             match('{'); if (state.failed) return ;
 
@@ -3245,8 +3245,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = RIGHT_CURLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:393:13: ( '}' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:393:15: '}'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:393:13: ( '}' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:393:15: '}'
             {
             match('}'); if (state.failed) return ;
 
@@ -3266,8 +3266,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = LEFT_BRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:396:14: ( '[' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:396:16: '['
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:396:14: ( '[' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:396:16: '['
             {
             match('['); if (state.failed) return ;
 
@@ -3287,8 +3287,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = RIGHT_BRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:399:15: ( ']' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:399:17: ']'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:399:15: ( ']' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:399:17: ']'
             {
             match(']'); if (state.failed) return ;
 
@@ -3308,8 +3308,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = POUND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:402:7: ( '#' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:402:9: '#'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:402:7: ( '#' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:402:9: '#'
             {
             match('#'); if (state.failed) return ;
 
@@ -3329,8 +3329,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:405:7: ( '=' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:405:9: '='
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:405:7: ( '=' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:405:9: '='
             {
             match('='); if (state.failed) return ;
 
@@ -3350,8 +3350,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:408:7: ( ',' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:408:9: ','
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:408:7: ( ',' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:408:9: ','
             {
             match(','); if (state.failed) return ;
 
@@ -3371,8 +3371,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = PERIOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:411:8: ( '.' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:411:10: '.'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:411:8: ( '.' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:411:10: '.'
             {
             match('.'); if (state.failed) return ;
 
@@ -3392,8 +3392,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DOUBLE_PERIOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:414:15: ( '..' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:414:17: '..'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:414:15: ( '..' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:414:17: '..'
             {
             match(".."); if (state.failed) return ;
 
@@ -3415,8 +3415,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:417:5: ( '/' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:417:7: '/'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:417:5: ( '/' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:417:7: '/'
             {
             match('/'); if (state.failed) return ;
 
@@ -3436,8 +3436,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = PERCENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:420:9: ( '%' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:420:11: '%'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:420:9: ( '%' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:420:11: '%'
             {
             match('%'); if (state.failed) return ;
 
@@ -3457,8 +3457,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:423:6: ( '+' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:423:8: '+'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:423:6: ( '+' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:423:8: '+'
             {
             match('+'); if (state.failed) return ;
 
@@ -3478,8 +3478,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:426:7: ( '-' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:426:9: '-'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:426:7: ( '-' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:426:9: '-'
             {
             match('-'); if (state.failed) return ;
 
@@ -3499,8 +3499,8 @@ public class QueryLexer extends Lexer {
         try {
             int _type = QMARK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:429:7: ( '?' )
-            // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:429:9: '?'
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:429:7: ( '?' )
+            // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:429:9: '?'
             {
             match('?'); if (state.failed) return ;
 
@@ -3516,12 +3516,12 @@ public class QueryLexer extends Lexer {
     // $ANTLR end "QMARK"
 
     public void mTokens() throws RecognitionException {
-        // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:8: ( VOID | IMPORT | RETURNS | DEFINE | LOAD | FILTER | FOREACH | ORDER | RANK | DENSE | CUBE | ROLLUP | DISTINCT | COGROUP | JOIN | CROSS | UNION | SPLIT | INTO | IF | OTHERWISE | ALL | AS | BY | USING | INNER | OUTER | ONSCHEMA | PARALLEL | PARTITION | GROUP | AND | OR | NOT | GENERATE | FLATTEN | ASC | DESC | BOOLEAN | INT | LONG | FLOAT | DOUBLE | DATETIME | CHARARRAY | BYTEARRAY | BAG | TUPLE | MAP | IS | STREAM | THROUGH | STORE | MAPREDUCE | SHIP | CACHE | INPUT | OUTPUT | STDERROR | STDIN | STDOUT | LIMIT | SAMPLE | LEFT | RIGHT | FULL | STR_OP_EQ | STR_OP_GT | STR_OP_LT | STR_OP_GTE | STR_OP_LTE | STR_OP_NE | STR_OP_MATCHES | TRUE | FALSE | NUM_OP_EQ | NUM_OP_LT | NUM_OP_LTE | NUM_OP_GT | NUM_OP_GTE | NUM_OP_NE | DCOLON | IDENTIFIER_L | INTEGER | LONGINTEGER | DOLLARVAR | DOUBLENUMBER | FLOATNUMBER | QUOTEDSTRING | MULTILINE_QUOTEDSTRING | EXECCOMMAND | STAR | COLON | DOLLAR | WS | SL_COMMENT | ML_COMMENT | SEMI_COLON | LEFT_PAREN | RIGHT_PAREN | LEFT_CURLY | RIGHT_CURLY | LEFT_BRACKET | RIGHT_BRACKET | POUND | EQUAL | COMMA | PERIOD | DOUBLE_PERIOD | DIV | PERCENT | PLUS | MINUS | QMARK )
+        // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:8: ( VOID | IMPORT | RETURNS | DEFINE | LOAD | FILTER | FOREACH | ORDER | RANK | DENSE | CUBE | ROLLUP | DISTINCT | COGROUP | JOIN | CROSS | UNION | SPLIT | INTO | IF | OTHERWISE | ALL | AS | BY | USING | INNER | OUTER | ONSCHEMA | PARALLEL | PARTITION | GROUP | AND | OR | NOT | GENERATE | FLATTEN | ASC | DESC | BOOLEAN | INT | LONG | FLOAT | DOUBLE | DATETIME | CHARARRAY | BYTEARRAY | BAG | TUPLE | MAP | IS | STREAM | THROUGH | STORE | MAPREDUCE | SHIP | CACHE | INPUT | OUTPUT | STDERROR | STDIN | STDOUT | LIMIT | SAMPLE | LEFT | RIGHT | FULL | STR_OP_EQ | STR_OP_GT | STR_OP_LT | STR_OP_GTE | STR_OP_LTE | STR_OP_NE | STR_OP_MATCHES | TRUE | FALSE | NUM_OP_EQ | NUM_OP_LT | NUM_OP_LTE | NUM_OP_GT | NUM_OP_GTE | NUM_OP_NE | DCOLON | IDENTIFIER_L | INTEGER | LONGINTEGER | DOLLARVAR | DOUBLENUMBER | FLOATNUMBER | QUOTEDSTRING | MULTILINE_QUOTEDSTRING | EXECCOMMAND | STAR | COLON | DOLLAR | WS | SL_COMMENT | ML_COMMENT | SEMI_COLON | LEFT_PAREN | RIGHT_PAREN | LEFT_CURLY | RIGHT_CURLY | LEFT_BRACKET | RIGHT_BRACKET | POUND | EQUAL | COMMA | PERIOD | DOUBLE_PERIOD | DIV | PERCENT | PLUS | MINUS | QMARK )
         int alt15=114;
         alt15 = dfa15.predict(input);
         switch (alt15) {
             case 1 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:10: VOID
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:10: VOID
                 {
                 mVOID(); if (state.failed) return ;
 
@@ -3529,7 +3529,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:15: IMPORT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:15: IMPORT
                 {
                 mIMPORT(); if (state.failed) return ;
 
@@ -3537,7 +3537,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:22: RETURNS
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:22: RETURNS
                 {
                 mRETURNS(); if (state.failed) return ;
 
@@ -3545,7 +3545,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:30: DEFINE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:30: DEFINE
                 {
                 mDEFINE(); if (state.failed) return ;
 
@@ -3553,7 +3553,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:37: LOAD
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:37: LOAD
                 {
                 mLOAD(); if (state.failed) return ;
 
@@ -3561,7 +3561,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:42: FILTER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:42: FILTER
                 {
                 mFILTER(); if (state.failed) return ;
 
@@ -3569,7 +3569,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:49: FOREACH
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:49: FOREACH
                 {
                 mFOREACH(); if (state.failed) return ;
 
@@ -3577,7 +3577,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:57: ORDER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:57: ORDER
                 {
                 mORDER(); if (state.failed) return ;
 
@@ -3585,7 +3585,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:63: RANK
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:63: RANK
                 {
                 mRANK(); if (state.failed) return ;
 
@@ -3593,7 +3593,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:68: DENSE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:68: DENSE
                 {
                 mDENSE(); if (state.failed) return ;
 
@@ -3601,7 +3601,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:74: CUBE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:74: CUBE
                 {
                 mCUBE(); if (state.failed) return ;
 
@@ -3609,7 +3609,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:79: ROLLUP
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:79: ROLLUP
                 {
                 mROLLUP(); if (state.failed) return ;
 
@@ -3617,7 +3617,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:86: DISTINCT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:86: DISTINCT
                 {
                 mDISTINCT(); if (state.failed) return ;
 
@@ -3625,7 +3625,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:95: COGROUP
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:95: COGROUP
                 {
                 mCOGROUP(); if (state.failed) return ;
 
@@ -3633,7 +3633,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:103: JOIN
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:103: JOIN
                 {
                 mJOIN(); if (state.failed) return ;
 
@@ -3641,7 +3641,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:108: CROSS
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:108: CROSS
                 {
                 mCROSS(); if (state.failed) return ;
 
@@ -3649,7 +3649,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:114: UNION
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:114: UNION
                 {
                 mUNION(); if (state.failed) return ;
 
@@ -3657,7 +3657,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:120: SPLIT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:120: SPLIT
                 {
                 mSPLIT(); if (state.failed) return ;
 
@@ -3665,7 +3665,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:126: INTO
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:126: INTO
                 {
                 mINTO(); if (state.failed) return ;
 
@@ -3673,7 +3673,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:131: IF
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:131: IF
                 {
                 mIF(); if (state.failed) return ;
 
@@ -3681,7 +3681,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:134: OTHERWISE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:134: OTHERWISE
                 {
                 mOTHERWISE(); if (state.failed) return ;
 
@@ -3689,7 +3689,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:144: ALL
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:144: ALL
                 {
                 mALL(); if (state.failed) return ;
 
@@ -3697,7 +3697,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:148: AS
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:148: AS
                 {
                 mAS(); if (state.failed) return ;
 
@@ -3705,7 +3705,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:151: BY
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:151: BY
                 {
                 mBY(); if (state.failed) return ;
 
@@ -3713,7 +3713,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:154: USING
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:154: USING
                 {
                 mUSING(); if (state.failed) return ;
 
@@ -3721,7 +3721,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:160: INNER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:160: INNER
                 {
                 mINNER(); if (state.failed) return ;
 
@@ -3729,7 +3729,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:166: OUTER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:166: OUTER
                 {
                 mOUTER(); if (state.failed) return ;
 
@@ -3737,7 +3737,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:172: ONSCHEMA
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:172: ONSCHEMA
                 {
                 mONSCHEMA(); if (state.failed) return ;
 
@@ -3745,7 +3745,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:181: PARALLEL
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:181: PARALLEL
                 {
                 mPARALLEL(); if (state.failed) return ;
 
@@ -3753,7 +3753,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:190: PARTITION
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:190: PARTITION
                 {
                 mPARTITION(); if (state.failed) return ;
 
@@ -3761,7 +3761,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:200: GROUP
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:200: GROUP
                 {
                 mGROUP(); if (state.failed) return ;
 
@@ -3769,7 +3769,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:206: AND
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:206: AND
                 {
                 mAND(); if (state.failed) return ;
 
@@ -3777,7 +3777,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:210: OR
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:210: OR
                 {
                 mOR(); if (state.failed) return ;
 
@@ -3785,7 +3785,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:213: NOT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:213: NOT
                 {
                 mNOT(); if (state.failed) return ;
 
@@ -3793,7 +3793,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 35 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:217: GENERATE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:217: GENERATE
                 {
                 mGENERATE(); if (state.failed) return ;
 
@@ -3801,7 +3801,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:226: FLATTEN
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:226: FLATTEN
                 {
                 mFLATTEN(); if (state.failed) return ;
 
@@ -3809,7 +3809,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 37 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:234: ASC
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:234: ASC
                 {
                 mASC(); if (state.failed) return ;
 
@@ -3817,7 +3817,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 38 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:238: DESC
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:238: DESC
                 {
                 mDESC(); if (state.failed) return ;
 
@@ -3825,7 +3825,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 39 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:243: BOOLEAN
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:243: BOOLEAN
                 {
                 mBOOLEAN(); if (state.failed) return ;
 
@@ -3833,7 +3833,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 40 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:251: INT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:251: INT
                 {
                 mINT(); if (state.failed) return ;
 
@@ -3841,7 +3841,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 41 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:255: LONG
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:255: LONG
                 {
                 mLONG(); if (state.failed) return ;
 
@@ -3849,7 +3849,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 42 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:260: FLOAT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:260: FLOAT
                 {
                 mFLOAT(); if (state.failed) return ;
 
@@ -3857,7 +3857,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 43 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:266: DOUBLE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:266: DOUBLE
                 {
                 mDOUBLE(); if (state.failed) return ;
 
@@ -3865,7 +3865,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 44 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:273: DATETIME
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:273: DATETIME
                 {
                 mDATETIME(); if (state.failed) return ;
 
@@ -3873,7 +3873,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 45 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:282: CHARARRAY
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:282: CHARARRAY
                 {
                 mCHARARRAY(); if (state.failed) return ;
 
@@ -3881,7 +3881,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 46 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:292: BYTEARRAY
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:292: BYTEARRAY
                 {
                 mBYTEARRAY(); if (state.failed) return ;
 
@@ -3889,7 +3889,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 47 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:302: BAG
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:302: BAG
                 {
                 mBAG(); if (state.failed) return ;
 
@@ -3897,7 +3897,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 48 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:306: TUPLE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:306: TUPLE
                 {
                 mTUPLE(); if (state.failed) return ;
 
@@ -3905,7 +3905,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 49 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:312: MAP
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:312: MAP
                 {
                 mMAP(); if (state.failed) return ;
 
@@ -3913,7 +3913,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 50 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:316: IS
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:316: IS
                 {
                 mIS(); if (state.failed) return ;
 
@@ -3921,7 +3921,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 51 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:319: STREAM
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:319: STREAM
                 {
                 mSTREAM(); if (state.failed) return ;
 
@@ -3929,7 +3929,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 52 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:326: THROUGH
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:326: THROUGH
                 {
                 mTHROUGH(); if (state.failed) return ;
 
@@ -3937,7 +3937,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 53 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:334: STORE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:334: STORE
                 {
                 mSTORE(); if (state.failed) return ;
 
@@ -3945,7 +3945,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 54 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:340: MAPREDUCE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:340: MAPREDUCE
                 {
                 mMAPREDUCE(); if (state.failed) return ;
 
@@ -3953,7 +3953,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 55 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:350: SHIP
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:350: SHIP
                 {
                 mSHIP(); if (state.failed) return ;
 
@@ -3961,7 +3961,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 56 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:355: CACHE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:355: CACHE
                 {
                 mCACHE(); if (state.failed) return ;
 
@@ -3969,7 +3969,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 57 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:361: INPUT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:361: INPUT
                 {
                 mINPUT(); if (state.failed) return ;
 
@@ -3977,7 +3977,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 58 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:367: OUTPUT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:367: OUTPUT
                 {
                 mOUTPUT(); if (state.failed) return ;
 
@@ -3985,7 +3985,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 59 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:374: STDERROR
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:374: STDERROR
                 {
                 mSTDERROR(); if (state.failed) return ;
 
@@ -3993,7 +3993,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 60 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:383: STDIN
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:383: STDIN
                 {
                 mSTDIN(); if (state.failed) return ;
 
@@ -4001,7 +4001,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 61 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:389: STDOUT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:389: STDOUT
                 {
                 mSTDOUT(); if (state.failed) return ;
 
@@ -4009,7 +4009,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 62 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:396: LIMIT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:396: LIMIT
                 {
                 mLIMIT(); if (state.failed) return ;
 
@@ -4017,7 +4017,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 63 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:402: SAMPLE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:402: SAMPLE
                 {
                 mSAMPLE(); if (state.failed) return ;
 
@@ -4025,7 +4025,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 64 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:409: LEFT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:409: LEFT
                 {
                 mLEFT(); if (state.failed) return ;
 
@@ -4033,7 +4033,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 65 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:414: RIGHT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:414: RIGHT
                 {
                 mRIGHT(); if (state.failed) return ;
 
@@ -4041,7 +4041,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 66 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:420: FULL
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:420: FULL
                 {
                 mFULL(); if (state.failed) return ;
 
@@ -4049,7 +4049,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 67 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:425: STR_OP_EQ
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:425: STR_OP_EQ
                 {
                 mSTR_OP_EQ(); if (state.failed) return ;
 
@@ -4057,7 +4057,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 68 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:435: STR_OP_GT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:435: STR_OP_GT
                 {
                 mSTR_OP_GT(); if (state.failed) return ;
 
@@ -4065,7 +4065,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 69 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:445: STR_OP_LT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:445: STR_OP_LT
                 {
                 mSTR_OP_LT(); if (state.failed) return ;
 
@@ -4073,7 +4073,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 70 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:455: STR_OP_GTE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:455: STR_OP_GTE
                 {
                 mSTR_OP_GTE(); if (state.failed) return ;
 
@@ -4081,7 +4081,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 71 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:466: STR_OP_LTE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:466: STR_OP_LTE
                 {
                 mSTR_OP_LTE(); if (state.failed) return ;
 
@@ -4089,7 +4089,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 72 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:477: STR_OP_NE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:477: STR_OP_NE
                 {
                 mSTR_OP_NE(); if (state.failed) return ;
 
@@ -4097,7 +4097,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 73 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:487: STR_OP_MATCHES
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:487: STR_OP_MATCHES
                 {
                 mSTR_OP_MATCHES(); if (state.failed) return ;
 
@@ -4105,7 +4105,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 74 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:502: TRUE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:502: TRUE
                 {
                 mTRUE(); if (state.failed) return ;
 
@@ -4113,7 +4113,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 75 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:507: FALSE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:507: FALSE
                 {
                 mFALSE(); if (state.failed) return ;
 
@@ -4121,7 +4121,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 76 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:513: NUM_OP_EQ
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:513: NUM_OP_EQ
                 {
                 mNUM_OP_EQ(); if (state.failed) return ;
 
@@ -4129,7 +4129,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 77 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:523: NUM_OP_LT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:523: NUM_OP_LT
                 {
                 mNUM_OP_LT(); if (state.failed) return ;
 
@@ -4137,7 +4137,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 78 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:533: NUM_OP_LTE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:533: NUM_OP_LTE
                 {
                 mNUM_OP_LTE(); if (state.failed) return ;
 
@@ -4145,7 +4145,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 79 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:544: NUM_OP_GT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:544: NUM_OP_GT
                 {
                 mNUM_OP_GT(); if (state.failed) return ;
 
@@ -4153,7 +4153,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 80 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:554: NUM_OP_GTE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:554: NUM_OP_GTE
                 {
                 mNUM_OP_GTE(); if (state.failed) return ;
 
@@ -4161,7 +4161,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 81 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:565: NUM_OP_NE
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:565: NUM_OP_NE
                 {
                 mNUM_OP_NE(); if (state.failed) return ;
 
@@ -4169,7 +4169,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 82 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:575: DCOLON
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:575: DCOLON
                 {
                 mDCOLON(); if (state.failed) return ;
 
@@ -4177,7 +4177,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 83 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:582: IDENTIFIER_L
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:582: IDENTIFIER_L
                 {
                 mIDENTIFIER_L(); if (state.failed) return ;
 
@@ -4185,7 +4185,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 84 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:595: INTEGER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:595: INTEGER
                 {
                 mINTEGER(); if (state.failed) return ;
 
@@ -4193,7 +4193,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 85 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:603: LONGINTEGER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:603: LONGINTEGER
                 {
                 mLONGINTEGER(); if (state.failed) return ;
 
@@ -4201,7 +4201,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 86 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:615: DOLLARVAR
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:615: DOLLARVAR
                 {
                 mDOLLARVAR(); if (state.failed) return ;
 
@@ -4209,7 +4209,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 87 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:625: DOUBLENUMBER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:625: DOUBLENUMBER
                 {
                 mDOUBLENUMBER(); if (state.failed) return ;
 
@@ -4217,7 +4217,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 88 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:638: FLOATNUMBER
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:638: FLOATNUMBER
                 {
                 mFLOATNUMBER(); if (state.failed) return ;
 
@@ -4225,7 +4225,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 89 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:650: QUOTEDSTRING
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:650: QUOTEDSTRING
                 {
                 mQUOTEDSTRING(); if (state.failed) return ;
 
@@ -4233,7 +4233,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 90 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:663: MULTILINE_QUOTEDSTRING
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:663: MULTILINE_QUOTEDSTRING
                 {
                 mMULTILINE_QUOTEDSTRING(); if (state.failed) return ;
 
@@ -4241,7 +4241,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 91 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:686: EXECCOMMAND
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:686: EXECCOMMAND
                 {
                 mEXECCOMMAND(); if (state.failed) return ;
 
@@ -4249,7 +4249,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 92 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:698: STAR
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:698: STAR
                 {
                 mSTAR(); if (state.failed) return ;
 
@@ -4257,7 +4257,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 93 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:703: COLON
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:703: COLON
                 {
                 mCOLON(); if (state.failed) return ;
 
@@ -4265,7 +4265,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 94 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:709: DOLLAR
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:709: DOLLAR
                 {
                 mDOLLAR(); if (state.failed) return ;
 
@@ -4273,7 +4273,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 95 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:716: WS
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:716: WS
                 {
                 mWS(); if (state.failed) return ;
 
@@ -4281,7 +4281,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 96 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:719: SL_COMMENT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:719: SL_COMMENT
                 {
                 mSL_COMMENT(); if (state.failed) return ;
 
@@ -4289,7 +4289,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 97 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:730: ML_COMMENT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:730: ML_COMMENT
                 {
                 mML_COMMENT(); if (state.failed) return ;
 
@@ -4297,7 +4297,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 98 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:741: SEMI_COLON
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:741: SEMI_COLON
                 {
                 mSEMI_COLON(); if (state.failed) return ;
 
@@ -4305,7 +4305,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 99 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:752: LEFT_PAREN
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:752: LEFT_PAREN
                 {
                 mLEFT_PAREN(); if (state.failed) return ;
 
@@ -4313,7 +4313,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 100 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:763: RIGHT_PAREN
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:763: RIGHT_PAREN
                 {
                 mRIGHT_PAREN(); if (state.failed) return ;
 
@@ -4321,7 +4321,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 101 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:775: LEFT_CURLY
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:775: LEFT_CURLY
                 {
                 mLEFT_CURLY(); if (state.failed) return ;
 
@@ -4329,7 +4329,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 102 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:786: RIGHT_CURLY
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:786: RIGHT_CURLY
                 {
                 mRIGHT_CURLY(); if (state.failed) return ;
 
@@ -4337,7 +4337,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 103 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:798: LEFT_BRACKET
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:798: LEFT_BRACKET
                 {
                 mLEFT_BRACKET(); if (state.failed) return ;
 
@@ -4345,7 +4345,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 104 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:811: RIGHT_BRACKET
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:811: RIGHT_BRACKET
                 {
                 mRIGHT_BRACKET(); if (state.failed) return ;
 
@@ -4353,7 +4353,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 105 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:825: POUND
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:825: POUND
                 {
                 mPOUND(); if (state.failed) return ;
 
@@ -4361,7 +4361,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 106 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:831: EQUAL
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:831: EQUAL
                 {
                 mEQUAL(); if (state.failed) return ;
 
@@ -4369,7 +4369,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 107 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:837: COMMA
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:837: COMMA
                 {
                 mCOMMA(); if (state.failed) return ;
 
@@ -4377,7 +4377,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 108 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:843: PERIOD
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:843: PERIOD
                 {
                 mPERIOD(); if (state.failed) return ;
 
@@ -4385,7 +4385,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 109 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:850: DOUBLE_PERIOD
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:850: DOUBLE_PERIOD
                 {
                 mDOUBLE_PERIOD(); if (state.failed) return ;
 
@@ -4393,7 +4393,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 110 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:864: DIV
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:864: DIV
                 {
                 mDIV(); if (state.failed) return ;
 
@@ -4401,7 +4401,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 111 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:868: PERCENT
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:868: PERCENT
                 {
                 mPERCENT(); if (state.failed) return ;
 
@@ -4409,7 +4409,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 112 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:876: PLUS
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:876: PLUS
                 {
                 mPLUS(); if (state.failed) return ;
 
@@ -4417,7 +4417,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 113 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:881: MINUS
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:881: MINUS
                 {
                 mMINUS(); if (state.failed) return ;
 
@@ -4425,7 +4425,7 @@ public class QueryLexer extends Lexer {
                 }
                 break;
             case 114 :
-                // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:887: QMARK
+                // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:1:887: QMARK
                 {
                 mQMARK(); if (state.failed) return ;
 
@@ -4439,8 +4439,8 @@ public class QueryLexer extends Lexer {
 
     // $ANTLR start synpred1_QueryLexer
     public final void synpred1_QueryLexer_fragment() throws RecognitionException {
-        // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:16: ( ID DCOLON )
-        // /home/iman/workspace/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:18: ID DCOLON
+        // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:16: ( ID DCOLON )
+        // /home/iman/git/ReStoreV3/reStoreV3/src/org/apache/pig/parser/QueryLexer.g:318:18: ID DCOLON
         {
         mID(); if (state.failed) return ;
 

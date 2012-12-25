@@ -352,12 +352,18 @@ public class PhysicalPlan extends OperatorPlan<PhysicalOperator> implements Clon
                 throw new CloneNotSupportedException(msg);
             }
             for (PhysicalOperator iOp : inputs) {
-                PhysicalOperator cloneIOp = matches.get(iOp);
-                if (cloneIOp == null) {
-                    String msg = "Unable to find clone for op " + iOp.name();
-                    throw new CloneNotSupportedException(msg);
-                }
-                newInputs.add(cloneIOp);
+            	if(mOps.containsKey(iOp)){//the below code is only executed when iOp is in the mOps.keyset
+	                PhysicalOperator cloneIOp = matches.get(iOp);
+	                if (cloneIOp == null) {
+	                    String msg = "Unable to find clone for op " + iOp.name();
+	                    throw new CloneNotSupportedException(msg);
+	                }
+	                newInputs.add(cloneIOp);
+            	}else{
+            		//to fix the case of an input that is not in the mOps.keyset
+            		PhysicalOperator cloneIOp = iOp.clone();
+            		newInputs.add(cloneIOp);
+            	}
             }
             cloneOp.setInputs(newInputs);
         }
